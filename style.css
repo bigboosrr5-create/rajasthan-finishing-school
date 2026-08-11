@@ -35,3 +35,206 @@ footer{background:#061f43;color:#fff;padding:32px 0 0}.footer-grid{display:grid;
     font-weight: 800;
     letter-spacing: 1px;
 }
+/* =====================================================
+   AI BUSINESS ANALYST - COURSE DETAILS
+===================================================== */
+
+.course-details {
+
+    padding: 60px 0;
+
+    background: #f7f9fc;
+
+}
+
+
+.course-details-header {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+}
+
+
+.course-details-header h2 {
+
+    font-size: 36px;
+
+    color: #061f43;
+
+    margin: 8px 0 12px;
+
+}
+
+
+.course-details-header > p:last-child {
+
+    color: #647084;
+
+    font-size: 16px;
+
+}
+
+
+.learning-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+
+}
+
+
+.learning-item {
+
+    background: white;
+
+    border: 1px solid #e1e6ed;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    transition: 0.25s;
+
+}
+
+
+.learning-item:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #f5b51b;
+
+    box-shadow:
+        0 8px 20px
+        rgba(6, 31, 67, 0.08);
+
+}
+
+
+.learning-item > span {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 50%;
+
+    background: #edf5ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.learning-item h3 {
+
+    font-size: 17px;
+
+    color: #061f43;
+
+    margin-bottom: 5px;
+
+}
+
+
+.learning-item p {
+
+    font-size: 13px;
+
+    color: #647084;
+
+    line-height: 1.6;
+
+}
+
+
+.course-highlight {
+
+    margin-top: 25px;
+
+    padding: 18px 22px;
+
+    background: #061f43;
+
+    color: white;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.course-highlight strong {
+
+    color: #f5b51b;
+
+    font-size: 16px;
+
+}
+
+
+.course-highlight span {
+
+    font-size: 13px;
+
+    color: #d9e2ee;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .learning-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .course-details-header h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .course-highlight {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+    }
+
+}
