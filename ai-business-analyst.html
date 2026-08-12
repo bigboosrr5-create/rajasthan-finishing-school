@@ -2,236 +2,975 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AI Business Analyst Course - Rajasthan Finishing School, Government Dungar College, Bikaner">
 
     <title>AI Business Analyst | Rajasthan Finishing School</title>
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
-        .course-page {
-            max-width: 1100px;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e4e8ef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            width: min(1150px, 92%);
             margin: auto;
-            padding: 60px 20px;
+            min-height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        .course-header {
-            background: #061f43;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #14213d;
+        }
+
+        .brand-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(135deg, #183b78, #2563eb);
             color: white;
-            padding: 45px;
-            border-radius: 12px;
-            margin-bottom: 30px;
+            font-weight: 800;
+            font-size: 16px;
         }
 
-        .course-header h1 {
-            font-size: 38px;
-            margin-bottom: 12px;
+        .brand-title {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: .3px;
         }
 
-        .course-header span {
-            color: #f5b51b;
+        .brand-subtitle {
+            font-size: 12px;
+            color: #687386;
+            margin-top: 2px;
         }
 
-        .course-header p {
-            line-height: 1.7;
+        .back-btn {
+            background: #173f7a;
+            color: #ffffff;
+
+            padding: 11px 18px;
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: .25s;
         }
 
-        .learn-title {
-            color: #061f43;
-            font-size: 28px;
-            margin-bottom: 20px;
+        .back-btn:hover {
+            background: #0f2e5c;
+            transform: translateY(-1px);
         }
 
-        .learning-grid {
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .course-hero {
+            background:
+                linear-gradient(135deg, #0d2d5c, #1769aa);
+
+            color: white;
+            padding: 70px 0;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .hero-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1.6fr .8fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            background: rgba(255,255,255,.13);
+            border: 1px solid rgba(255,255,255,.25);
+
+            padding: 7px 13px;
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 18px;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            font-size: 18px;
+            color: #e8f2ff;
+            margin-bottom: 25px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .meta-box {
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.18);
+
+            padding: 10px 14px;
+            border-radius: 8px;
+
+            font-size: 14px;
+        }
+
+        .hero-side {
+            background: white;
+            color: #172033;
+
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.18);
+        }
+
+        .hero-side h3 {
+            color: #173f7a;
+            margin-bottom: 15px;
+        }
+
+        .hero-side p {
+            margin-bottom: 10px;
+            color: #566176;
+        }
+
+        .hero-side strong {
+            color: #172033;
+        }
+
+
+        /* =========================
+           QUICK BOXES
+        ========================= */
+
+        .quick-section {
+            padding: 50px 0 20px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
-        .learning-card {
+        .quick-card {
             background: white;
-            padding: 22px;
-            border-radius: 10px;
-            border: 1px solid #e1e6ed;
+            border: 1px solid #e4e8ef;
+            border-radius: 14px;
+
+            padding: 24px 18px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 25px rgba(20,35,60,.06);
+
+            transition: .25s;
         }
 
-        .learning-card .icon {
+        .quick-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(20,35,60,.12);
+        }
+
+        .quick-icon {
             font-size: 30px;
             margin-bottom: 10px;
         }
 
-        .learning-card h3 {
-            color: #061f43;
+        .quick-card h3 {
+            color: #173f7a;
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .quick-card p {
+            color: #667085;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .quick-card a {
+            display: inline-block;
+
+            background: #173f7a;
+            color: white;
+
+            padding: 8px 13px;
+            border-radius: 7px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        .content-section {
+            padding: 55px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading span {
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+            margin-top: 5px;
+            color: #172033;
+        }
+
+        .section-heading p {
+            color: #687386;
+            max-width: 700px;
+            margin: 8px auto 0;
+        }
+
+
+        /* =========================
+           COURSE STRUCTURE
+        ========================= */
+
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .structure-card {
+            background: white;
+            border-radius: 14px;
+            border: 1px solid #e4e8ef;
+
+            padding: 25px;
+
+            box-shadow: 0 8px 25px rgba(20,35,60,.06);
+        }
+
+        .structure-number {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eaf2ff;
+            color: #173f7a;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .structure-card h3 {
+            color: #173f7a;
+            margin-bottom: 10px;
+        }
+
+        .structure-card ul {
+            padding-left: 20px;
+        }
+
+        .structure-card li {
+            margin-bottom: 7px;
+            color: #596579;
+        }
+
+
+        /* =========================
+           SKILL OUTCOMES
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #e4e8ef;
+
+            padding: 23px;
+            border-radius: 14px;
+
+            box-shadow: 0 8px 25px rgba(20,35,60,.06);
+        }
+
+        .skill-card h3 {
+            font-size: 17px;
+            color: #173f7a;
+            margin-bottom: 8px;
+        } .skill-card p {
+            color: #687386;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FEES
+        ========================= */
+
+        .fee-table-wrapper {
+            background: white;
+            border: 1px solid #e4e8ef;
+            border-radius: 15px;
+
+            overflow-x: auto;
+
+            box-shadow: 0 8px 25px rgba(20,35,60,.06);
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        .fee-table th {
+            background: #173f7a;
+            color: white;
+
+            padding: 15px;
+            text-align: left;
+        }
+
+        .fee-table td {
+            padding: 14px 15px;
+            border-bottom: 1px solid #e8ecf2;
+            color: #505d70;
+        }
+
+        .fee-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .fee-highlight {
+            font-weight: 800;
+            color: #173f7a !important;
+        }
+
+        .fee-note {
+            margin-top: 15px;
+            background: #fff8e6;
+            border: 1px solid #f3dfaa;
+
+            padding: 14px 17px;
+            border-radius: 10px;
+
+            color: #695526;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ELIGIBILITY
+        ========================= */
+
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .eligibility-card {
+            background: white;
+            border: 1px solid #e4e8ef;
+            border-radius: 15px;
+
+            padding: 26px;
+
+            box-shadow: 0 8px 25px rgba(20,35,60,.06);
+        }
+
+        .eligibility-card h3 {
+            color: #173f7a;
+            margin-bottom: 15px;
+        }
+
+        .eligibility-list {
+            list-style: none;
+        }
+
+        .eligibility-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: #596579;
+        }
+
+        .eligibility-list li::before {
+            content: "✓";
+
+            position: absolute;
+            left: 0;
+
+            color: #16834b;
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-section {
+            padding: 60px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #173f7a, #0e5fa8);
+
+            color: white;
+
+            border-radius: 20px;
+
+            padding: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .cta-box h2 {
+            font-size: 30px;
             margin-bottom: 8px;
         }
 
-        .learning-card p {
-            color: #647084;
-            line-height: 1.6;
+        .cta-box p {
+            color: #e4efff;
         }
 
-        .back-button {
+        .register-btn {
             display: inline-block;
-            margin-top: 35px;
-            padding: 12px 24px;
-            background: #f5b51b;
-            color: #061f43;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
+
+            background: white;
+            color: #173f7a;
+
+            padding: 13px 22px;
+            border-radius: 9px;
+
+            font-weight: 800;
+            white-space: nowrap;
         }
 
-        @media (max-width: 700px) {
-            .learning-grid {
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #101827;
+            color: #dce4f0;
+
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-bottom: 6px;
+        }
+
+        footer p {
+            color: #9ba8ba;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
                 grid-template-columns: 1fr;
             }
 
-            .course-header h1 {
-                font-size: 28px;
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .course-header {
-                padding: 28px 20px;
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
+
+            .eligibility-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
+
+
+        @media (max-width: 600px) { 
+           .header-container {
+                min-height: 65px;
+            }
+
+            .brand-title {
+                font-size: 15px;
+            }
+
+            .brand-subtitle {
+                font-size: 10px;
+            }
+
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+            }
+
+            .back-btn {
+                padding: 9px 12px;
+                font-size: 12px;
+            }
+
+            .course-hero {
+                padding: 50px 0;
+            }
+
+            .course-hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .quick-card {
+                padding: 18px 10px;
+            }
+
+            .quick-card h3 {
+                font-size: 14px;
+            }
+
+            .structure-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 27px;
+            }
+
+            .cta-box {
+                padding: 30px 22px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta-box h2 {
+                font-size: 25px;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<div class="course-page">
 
-    <div class="course-header">
+<!-- =========================
+     HEADER
+========================= -->
 
-        <h1>
-            AI BUSINESS <span>ANALYST</span>
-        </h1>
+<header class="site-header">
 
-        <p>
-            Industry-oriented training program focused on
-            Business Analysis, Artificial Intelligence,
-            Data Analytics and Business Intelligence.
-        </p>
+    <div class="header-container">
 
-        <p>
-            <strong>Government Dungar College, Bikaner</strong>
-        </p>
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo">
+                RF
+            </div>
+
+            <div>
+                <div class="brand-title">
+                    RAJASTHAN FINISHING SCHOOL
+                </div>
+
+                <div class="brand-subtitle">
+                    Government Dungar College, Bikaner
+                </div>
+            </div>
+
+        </a>
+
+
+        <a href="index.html#courses" class="back-btn">
+            ← Back to Courses
+        </a>
 
     </div>
 
-
-    <h2 class="learn-title">
-        What You Will Learn
-    </h2>
+</header>
 
 
-    <div class="learning-grid">
 
-        <div class="learning-card">
-            <div class="icon">📊</div>
-            <h3>Business Analyst Fundamentals</h3>
-            <p>
-                Learn the fundamentals of business analysis,
-                analytical thinking and problem solving.
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="course-hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <span class="eyebrow">
+                RAJASTHAN FINISHING SCHOOL
+            </span>
+
+            <h1>
+                AI Business Analyst
+            </h1>
+
+            <p class="hero-description">
+                Industry-oriented training in Business Analysis,
+                Data Analytics, Artificial Intelligence tools and
+                data-driven decision making.
             </p>
+
+
+            <div class="hero-meta">
+
+                <div class="meta-box">
+                    Sector: IT & ITES
+                </div>
+
+                <div class="meta-box">
+                    Duration: 540 Hours
+                </div>
+
+                <div class="meta-box">
+                    Seats: 60
+                </div>
+
+                <div class="meta-box">
+                    Training: Government Dungar College, Bikaner
+                </div>
+
+            </div>
+
         </div>
 
 
-        <div class="learning-card">
-            <div class="icon">🤖</div>
-            <h3>Artificial Intelligence Fundamentals</h3>
+        <div class="hero-side">
+
+            <h3>
+                Course at a Glance
+            </h3>
+
             <p>
-                Understand the basic concepts of Artificial
-                Intelligence and its business applications.
+                <strong>Course:</strong>
+                AI Business Analyst
             </p>
-        </div>
 
-
-        <div class="learning-card">
-            <div class="icon">🗄️</div>
-            <h3>SQL – Fundamentals to Advanced</h3>
             <p>
-                Learn SQL for data querying, filtering,
-                analysis and business data management.
+                <strong>Sector:</strong>
+                IT & ITES
             </p>
-        </div>
 
-
-        <div class="learning-card">
-            <div class="icon">📈</div>
-            <h3>Advanced Excel</h3>
             <p>
-                Learn advanced Excel functions, data analysis
-                and professional spreadsheet techniques.
+                <strong>Duration:</strong>
+                540 Hours
             </p>
-        </div>
-        <div class="learning-card">
-            <div class="icon">📊</div>
-            <h3>Power BI & Data Visualization</h3>
+
             <p>
-                Create interactive dashboards, reports and
-                meaningful business data visualizations.
+                <strong>Seats:</strong>
+                60
             </p>
-        </div>
 
-
-        <div class="learning-card">
-            <div class="icon">📝</div>
-            <h3>Business Requirement Documentation</h3>
             <p>
-                Learn how to understand, document and
-                communicate business requirements.
+                <strong>Location:</strong>
+                Government Dungar College, Bikaner
             </p>
-        </div>
 
-
-        <div class="learning-card">
-            <div class="icon">📋</div>
-            <h3>Dashboard & Reporting</h3>
-            <p>
-                Develop professional dashboards and
-                business reports using real-world data.
-            </p>
-        </div>
-
-
-        <div class="learning-card">
-            <div class="icon">🔍</div>
-            <h3>Case Studies</h3>
-            <p>
-                Work on practical business case studies
-                and real-world analytical problems.
-            </p>
-        </div>
-
-
-        <div class="learning-card">
-            <div class="icon">💻</div>
-            <h3>Hands-on Project Work</h3>
-            <p>
-                Apply your knowledge through practical
-                projects and industry-oriented tasks.
-            </p>
-        </div>
-
-
-        <div class="learning-card">
-            <div class="icon">🎯</div>
-            <h3>Career-Oriented Learning</h3>
-            <p>
-                Develop practical skills required for
-                modern Business Analyst roles.
-            </p>
         </div>
 
     </div>
 
+</section>
 
-    <a href="index.html" class="back-button">
-        ← Back to Courses
-    </a>
 
-</div>
 
-</body>
-</html>
+<!-- =========================
+     QUICK FOUR BOXES
+========================= -->
+
+<section class="quick-section">
+
+    <div class="container">
+
+        <div class="quick-grid">
+
+
+            <div class="quick-card"> 
+        <div class="quick-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Course Structure
+                </h3>
+
+                <p>
+                    Course modules and learning areas
+                </p>
+
+                <a href="#course-structure">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <div class="quick-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Skill Outcomes
+                </h3>
+
+                <p>
+                    Skills students will develop
+                </p>
+
+                <a href="#skill-outcomes">
+                    View Details
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <div class="quick-icon">
+                    ₹
+                </div>
+
+                <h3>
+                    Fees Structure
+                </h3>
+
+                <p>
+                    Category-wise course fees
+                </p>
+
+                <a href="#fees">
+                    View Fees
+                </a>
+
+            </div>
+
+
+            <div class="quick-card">
+
+                <div class="quick-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Eligibility
+                </h3>
+
+                <p>
+                    Who can apply for the course
+                </p>
+
+                <a href="#eligibility">
+                    Check Eligibility
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COURSE STRUCTURE
+========================= -->
+
+<section class="content-section" id="course-structure">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>
+                COURSE STRUCTURE
+            </span>
+
+            <h2>
+                What You Will Learn
+            </h2>
+
+            <p>
+                The AI Business Analyst program combines
+                business understanding, data analysis,
+                AI tools and practical decision-making skills.
+            </p>
+
+        </div>
+
+
+        <div class="structure-grid">
+
+
+            <div class="structure-card">
+
+                <div class="structure-number">
+                    01
+                </div>
+
+                <h3>
+                    Business Analysis Fundamentals
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Introduction to Business Analysis
+                    </li>
+
+                    <li>
+                        Business requirements and problem identification
+                    </li>
+
+                    <li>
+                        Requirement gathering and documentation
+                    </li>
+
+                    <li>
+                        Business process understanding
+                    </li>
+
+                    <li>
+                        Data-driven business decision making
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="structure-card">
+
+                <div class="structure-number">
+                    02
+                </div>
+
+                <h3>
+                    Data Analytics
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Data collection and preparation
+                    </li>
+
+                    <li>
+                        Data cleaning and analysis
+                    </li>
+
+                    <li>
+                        Spreadsheet-based analysis
+                    </li>
+
+                    <li>
+                        Data visualization
+                    </l
+        
