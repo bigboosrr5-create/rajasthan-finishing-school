@@ -7,45 +7,38 @@
 <title>Digital Marketing with AI | Rajasthan Finishing School</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
+    font-family:Arial, Helvetica, sans-serif;
     background:linear-gradient(135deg,#eef4ff,#f8fbff);
-    color:#17233c;
-    min-height:100vh;
+    color:#172033;
+    line-height:1.6;
 }
 
-/* ================= HEADER ================= */
-
+/* TOP HEADER */
 .header{
-    background:linear-gradient(135deg,#071b49,#123c82);
+    background:linear-gradient(135deg,#071b41,#123f82,#071b41);
     color:white;
-    text-align:center;
     padding:35px 20px 45px;
-}
-
-.header small{
-    font-size:15px;
-    letter-spacing:1px;
-    opacity:.9;
+    text-align:center;
 }
 
 .header h1{
-    font-size:42px;
-    margin:12px 0;
-    font-weight:800;
+    font-size:38px;
+    margin-bottom:12px;
+    letter-spacing:.3px;
 }
 
-.header h2{
-    font-size:20px;
-    font-weight:400;
-    opacity:.95;
+.header p{
+    font-size:18px;
+    color:#dbe8ff;
+    max-width:850px;
+    margin:auto;
 }
 
 .badges{
@@ -57,47 +50,44 @@ body{
 }
 
 .badge{
-    background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.3);
     padding:10px 18px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.10);
     border-radius:30px;
+    color:#fff;
     font-size:14px;
 }
 
-/* ================= MAIN ================= */
-
+/* MAIN */
 .container{
-    width:92%;
     max-width:1100px;
     margin:-25px auto 50px;
+    padding:0 18px;
 }
 
-/* ================= INTRO ================= */
-
-.intro{
+.course-intro{
     background:white;
     border-radius:20px;
-    padding:30px;
-    box-shadow:0 10px 35px rgba(0,0,0,.10);
-    margin-bottom:25px;
+    padding:35px;
+    box-shadow:0 12px 35px rgba(18,48,90,.12);
     text-align:center;
+    margin-bottom:28px;
 }
 
-.intro h3{
-    font-size:27px;
-    color:#123c82;
+.course-intro h2{
+    color:#123f82;
+    font-size:31px;
     margin-bottom:12px;
 }
 
-.intro p{
-    color:#5b6678;
-    line-height:1.7;
-    max-width:850px;
+.course-intro p{
+    max-width:800px;
     margin:auto;
+    color:#5c6575;
+    font-size:16px;
 }
 
-/* ================= CARDS ================= */
-
+/* FOUR CARDS */
 .cards{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -106,1000 +96,868 @@ body{
 
 .card{
     background:white;
+    border:1px solid #e2e8f2;
     border-radius:20px;
-    padding:28px;
-    min-height:220px;
-    box-shadow:0 8px 25px rgba(0,0,0,.09);
-    border:1px solid #e5eaf2;
-    cursor:pointer;
-    transition:.3s;
+    padding:30px;
+    min-height:265px;
+    box-shadow:0 8px 25px rgba(22,46,82,.08);
+    transition:.3s ease;
     position:relative;
     overflow:hidden;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.card::before{
+.card::after{
     content:"";
     position:absolute;
-    width:90px;
-    height:90px;
+    width:100px;
+    height:100px;
+    background:#edf4ff;
     border-radius:50%;
-    background:#eaf1ff;
-    right:-25px;
-    top:-25px;
+    right:-35px;
+    top:-35px;
+    z-index:0;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(18,63,130,.16);
 }
 
 .icon{
-    width:62px;
-    height:62px;
-    border-radius:17px;
+    width:55px;
+    height:55px;
+    border-radius:15px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:31px;
+    font-size:28px;
+    background:#edf4ff;
     margin-bottom:18px;
-    background:#eaf1ff;
+    position:relative;
+    z-index:1;
 }
 
 .card h3{
     font-size:22px;
-    color:#123c82;
-    margin-bottom:9px;
+    margin-bottom:10px;
+    color:#132b55;
+    position:relative;
+    z-index:1;
 }
 
 .card p{
     color:#687386;
-    line-height:1.5;
+    margin-bottom:18px;
+    position:relative;
+    z-index:1;
 }
 
-.click{
-    display:inline-block;
-    margin-top:15px;
-    color:#1769d1;
+.view-btn{
+    border:none;
+    background:none;
+    color:#1261c9;
     font-weight:bold;
-    font-size:14px;
+    font-size:15px;
+    cursor:pointer;
+    padding:5px 0;
+    position:relative;
+    z-index:1;
 }
 
-/* ================= DETAILS ================= */
-
-.details{
-    margin-top:30px;
+.view-btn:hover{
+    color:#073d88;
 }
 
-.detail-box{
+/* MODAL */
+.modal{
     display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(4,17,40,.72);
+    z-index:9999;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.modal-content{
     background:white;
-    border-radius:20px;
-    padding:32px;
-    margin-bottom:25px;
-    box-shadow:0 10px 35px rgba(0,0,0,.10);
-    animation:fadeIn .35s ease;
+    width:100%;
+    max-width:850px;
+    margin:40px auto;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,.3);
+    animation:popup .25s ease;
 }
 
-.detail-box.active{
-    display:block;
-}
-
-@keyframes fadeIn{
+@keyframes popup{
     from{
         opacity:0;
-        transform:translateY(10px);
+        transform:translateY(20px) scale(.98);
     }
-
     to{
         opacity:1;
-        transform:translateY(0);
+        transform:translateY(0) scale(1);
     }
 }
 
-.detail-title{
+.modal-header{
+    background:linear-gradient(135deg,#092657,#145db8);
+    color:white;
+    padding:25px 30px;
     display:flex;
     align-items:center;
-    gap:15px;
-    margin-bottom:25px;
+    justify-content:space-between;
 }
 
-.detail-title .big-icon{
-    width:55px;
-    height:55px;
-    border-radius:15px;
-    background:#eaf1ff;
+.modal-header h2{
+    font-size:26px;
+}
+
+.close{
+    font-size:30px;
+    cursor:pointer;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
     display:flex;
+    align-items:center;
     justify-content:center;
-    align-items:center;
-    font-size:28px;
 }
 
-.detail-title h2{
-    color:#123c82;
-    font-size:27px;
+.close:hover{
+    background:rgba(255,255,255,.25);
 }
 
-.section{
-    margin-top:25px;
+.modal-body{
+    padding:30px;
 }
 
-.section h4{
-    color:#173f7c;
-    font-size:19px;
-    margin-bottom:13px;
-    border-left:5px solid #1769d1;
-    padding-left:10px;
+.modal-body h3{
+    color:#123f82;
+    margin:20px 0 12px;
+    font-size:21px;
 }
 
-.list{
-    list-style:none;
+.modal-body h3:first-child{
+    margin-top:0;
 }
 
-.list li{
-    padding:11px 10px;
-    border-bottom:1px solid #edf0f5;
-    line-height:1.5;
-}
-
-.list li::before{
-    content:"✓";
-    color:#138a4b;
-    font-weight:bold;
-    margin-right:10px;
-}
-.module-grid{
+.modal-body p{
+    color:#5f6979;
+    } 
+    .module-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:14px;
+    gap:12px;
+    margin-top:15px;
 }
 
 .module{
-    background:#f7faff;
-    border:1px solid #dfe8f7;
-    padding:18px;
-    border-radius:13px;
-}
-
-.module strong{
-    display:block;
-    color:#123c82;
-    margin-bottom:7px;
+    background:#f4f8ff;
+    border:1px solid #dfe9f8;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
+    color:#243b63;
 }
 
 .module span{
-    color:#647084;
-    font-size:14px;
-    line-height:1.5;
+    margin-right:8px;
 }
 
-/* ================= SKILLS ================= */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.outcome-list,
+.eligibility-list{
+    list-style:none;
+    margin-top:12px;
 }
 
-.skill{
-    background:#eef5ff;
-    border:1px solid #d5e4fa;
-    color:#17447e;
-    padding:10px 15px;
-    border-radius:25px;
-    font-size:14px;
-    font-weight:600;
+.outcome-list li,
+.eligibility-list li{
+    background:#f6f9fd;
+    padding:12px 15px;
+    margin-bottom:9px;
+    border-radius:10px;
+    border-left:4px solid #1767c8;
 }
 
-/* ================= FEES ================= */
+.outcome-list li::before{
+    content:"✓";
+    color:#11844b;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* FEES TABLE */
+.table-wrapper{
+    overflow-x:auto;
+    margin-top:18px;
+}
 
 .fee-table{
     width:100%;
     border-collapse:collapse;
-    margin-top:15px;
-    overflow:hidden;
-    border-radius:12px;
+    min-width:650px;
 }
 
 .fee-table th{
-    background:#123c82;
+    background:#123f82;
     color:white;
     padding:14px;
-    text-align:center;
+    text-align:left;
 }
 
 .fee-table td{
     padding:14px;
-    border:1px solid #e2e7ef;
-    text-align:center;
+    border-bottom:1px solid #e2e7ef;
+    background:#fff;
 }
 
-.fee-table tr:nth-child(even){
+.fee-table tr:nth-child(even) td{
     background:#f7faff;
 }
 
+.amount{
+    font-weight:bold;
+    color:#c53131;
+    white-space:nowrap;
+}
+
 .note{
-    margin-top:15px;
-    padding:15px;
-    background:#fff8e6;
-    border-left:5px solid #f0ae00;
-    border-radius:8px;
-    color:#65521e;
-    line-height:1.6;
-}
-
-/* ================= ELIGIBILITY ================= */
-
-.eligibility{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.eligibility-item{
-    background:#f8fbff;
-    border:1px solid #e1e8f3;
-    padding:18px;
-    border-radius:13px;
-}
-
-.eligibility-item strong{
-    display:block;
-    color:#123c82;
-    margin-bottom:7px;
-}
-
-/* ================= BENEFITS ================= */
-
-.benefit-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.benefit{
-    padding:18px;
-    background:#f8fbff;
-    border:1px solid #e1e8f3;
-    border-radius:13px;
-}
-
-.benefit strong{
-    display:block;
-    color:#123c82;
-    margin-bottom:7px;
-}
-
-/* ================= CTA ================= */
-
-.cta{
-    margin-top:25px;
-    background:linear-gradient(135deg,#123c82,#1769d1);
-    color:white;
-    text-align:center;
-    padding:30px;
-    border-radius:20px;
-}
-
-.cta h2{
-    margin-bottom:10px;
-}
-
-.cta p{
-    opacity:.9;
-    line-height:1.6;
-}
-
-.contact{
     margin-top:18px;
-    font-size:18px;
-    font-weight:bold;
+    padding:15px;
+    background:#fff8e8;
+    border-left:4px solid #e3a500;
+    border-radius:8px;
+    color:#66511d;
 }
 
-/* ================= BACK BUTTON ================= */
-
-.back{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 18px;
-    border-radius:25px;
-    background:#edf3fc;
-    color:#123c82;
-    cursor:pointer;
-    font-weight:bold;
+/* ELIGIBILITY BOX */
+.info-box{
+    background:#f5f9ff;
+    border:1px solid #dce8f8;
+    border-radius:14px;
+    padding:18px;
+    margin-top:15px;
 }
 
-/* ================= MOBILE ================= */
+.documents{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
 
-@media(max-width:750px){
+.document{
+    padding:13px;
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+}
+
+/* FOOTER */
+.footer{
+    background:#071b41;
+    color:#d9e5f8;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.footer strong{
+    color:white;
+}
+
+/* MOBILE */
+@media(max-width:700px){
 
     .header h1{
-        font-size:30px;
+        font-size:27px;
     }
 
-    .header h2{
-        font-size:16px;
+    .header p{
+        font-size:15px;
     }
 
     .cards{
         grid-template-columns:1fr;
     }
 
+    .course-intro{
+        padding:25px 18px;
+    }
+
+    .course-intro h2{
+        font-size:25px;
+    }
+
+    .card{
+        min-height:auto;
+    }
+
     .module-grid{
         grid-template-columns:1fr;
     }
 
-    .eligibility{
+    .documents{
         grid-template-columns:1fr;
     }
 
-    .benefit-grid{
-        grid-template-columns:1fr;
+    .modal{
+        padding:10px;
     }
 
-    .detail-box{
-        padding:22px;
+    .modal-content{
+        margin:20px auto;
     }
 
-    .fee-table{
-        font-size:13px;
+    .modal-header{
+        padding:20px;
     }
 
-    .fee-table th,
-    .fee-table td{
-        padding:9px 5px;
+    .modal-header h2{
+        font-size:20px;
     }
 
+    .modal-body{
+        padding:20px;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
-<header class="header">
-
-    <small>RAJASTHAN FINISHING SCHOOL (RFS) INITIATIVE</small>
+<!-- HEADER -->
+<section class="header">
 
     <h1>Digital Marketing with AI</h1>
 
-    <h2>Digital Marketing, AI Tools & Data-Driven Growth</h2>
-
-    <div class="badges">
-
-        <div class="badge">📱 IT & ITES</div>
-
-        <div class="badge">⏱️ 540 Hours</div>
-
-        <div class="badge">👥 60 Seats</div>
-
-        <div class="badge">🚀 Industry-Oriented Training</div>
-
-    </div>
-
-</header>
-
-
-
-<main class="container">
-
-
-<!-- ================= INTRO ================= -->
-
-<section class="intro">
-
-    <h3>Digital Marketing with AI</h3>
-
     <p>
-        Develop practical skills in digital marketing, social media,
-        search engine optimization, online advertising, analytics,
-        content creation and Artificial Intelligence tools for modern
-        digital business and career opportunities.
+        Digital Marketing, AI Tools & Data-Driven Growth
     </p>
 
-  </section> 
-<!-- ================= FOUR CARDS ================= -->
-
-<section class="cards">
-
-
-    <!-- COURSE STRUCTURE -->
-
-    <div class="card" onclick="openDetail('structure')">
-
-        <div class="icon">📚</div>
-
-        <h3>Course Structure</h3>
-
-        <p>
-            Explore the complete course modules, digital marketing
-            concepts, AI tools, practical training and project work.
-        </p>
-
-        <span class="click">
-            View Course Structure →
-        </span>
-
-    </div>
-
-
-
-    <!-- SKILLS -->
-
-    <div class="card" onclick="openDetail('skills')">
-
-        <div class="icon">🤖</div>
-
-        <h3>Skills & Career Outcomes</h3>
-
-        <p>
-            Learn digital marketing and AI-powered skills required
-            for modern marketing and business careers.
-        </p>
-
-        <span class="click">
-            View Skills & Outcomes →
-        </span>
-
-    </div>
-
-
-
-    <!-- FEES -->
-
-    <div class="card" onclick="openDetail('fees')">
-
-        <div class="icon">💰</div>
-
-        <h3>Fee Structure</h3>
-
-        <p>
-            View the complete fee structure for Government,
-            State-Funded and Private institutions.
-        </p>
-
-        <span class="click">
-            View Fee Structure →
-        </span>
-
-    </div>
-
-
-
-    <!-- ELIGIBILITY -->
-
-    <div class="card" onclick="openDetail('eligibility')">
-
-        <div class="icon">🎓</div>
-
-        <h3>Eligibility</h3>
-
-        <p>
-            Check academic eligibility, eligible institutions
-            and required documents for admission.
-        </p>
-
-        <span class="click">
-            View Eligibility →
-        </span>
-
+    <div class="badges">
+        <div class="badge">💻 IT & ITES</div>
+        <div class="badge">⏱️ 540 Hours</div>
+        <div class="badge">👥 60 Seats</div>
+        <div class="badge">🚀 Industry-Oriented Training</div>
     </div>
 
 </section>
 
 
+<main class="container">
 
-<!-- ================= DETAILS ================= -->
+    <!-- COURSE INTRO -->
+    <section class="course-intro">
 
-<section class="details">
+        <h2>Digital Marketing with AI</h2>
 
+        <p>
+            Develop practical skills in digital marketing, social media,
+            search engine optimization, online advertising, analytics,
+            content creation and Artificial Intelligence tools for modern
+            digital business and career opportunities.
+        </p>
 
-<!-- =====================================================
-     COURSE STRUCTURE
-===================================================== -->
+    </section>
 
-<div id="structure" class="detail-box">
 
-    <div class="detail-title">
+    <!-- FOUR MAIN BOXES -->
+    <section class="cards">
 
-        <div class="big-icon">📚</div>
+        <!-- COURSE STRUCTURE -->
+        <div class="card">
 
-        <h2>Course Structure</h2>
+            <div class="icon">📚</div>
 
-    </div>
+            <h3>Course Structure</h3>
 
+            <p>
+                Explore complete course modules, digital marketing concepts,
+                AI tools, practical training and project work.
+            </p>
 
+            <button class="view-btn" onclick="openModal('structureModal')">
+                View Course Structure →
+            </button>
 
-    <div class="section">
+        </div>
 
-        <h4>Core Learning Modules</h4>
 
-        <div class="module-grid">
+        <!-- SKILLS -->
+        <div class="card">
 
+            <div class="icon">🤖</div>
 
-            <div class="module">
+            <h3>Skills & Career Outcomes</h3> 
+            <p>
+                Learn digital marketing and AI-powered skills required for
+                modern marketing and business careers.
+            </p>
 
-                <strong>📢 Digital Marketing Fundamentals</strong>
+            <button class="view-btn" onclick="openModal('skillsModal')">
+                View Skills & Outcomes →
+            </button>
 
-                <span>
-                    Introduction to digital marketing, digital
-                    channels, customer journey, online business
-                    models and marketing strategies.
-                </span>
+        </div>
 
-            </div>
 
+        <!-- FEES -->
+        <div class="card">
 
+            <div class="icon">💰</div>
 
-            <div class="module">
+            <h3>Fee Structure</h3>
 
-                <strong>🔎 Search Engine Optimization (SEO)</strong>
+            <p>
+                View the complete fee structure for Government,
+                State-Funded and Private institutions.
+            </p>
 
-                <span>
-                    Keyword research, on-page SEO, technical SEO,
-                    content optimization, link building and
-                    search engine visibility.
-                </span>
+            <button class="view-btn" onclick="openModal('feesModal')">
+                View Fee Structure →
+            </button>
 
-            </div>
+        </div>
 
 
+        <!-- ELIGIBILITY -->
+        <div class="card">
 
-            <div class="module">
+            <div class="icon">🎓</div>
 
-                <strong>📱 Social Media Marketing</strong>
+            <h3>Eligibility</h3>
 
-                <span>
-                    Social media strategy, content planning,
-                    audience engagement, campaign management
-                    and social media branding.
-                </span>
+            <p>
+                Check academic eligibility, eligible institutions and
+                required documents for admission.
+            </p>
 
-            </div>
+            <button class="view-btn" onclick="openModal('eligibilityModal')">
+                View Eligibility →
+            </button>
 
+        </div>
 
+    </section>
 
-            <div class="module">
+</main>
 
-                <strong>📊 Data Analytics & Reporting</strong>
 
-                <span>
-                    Digital analytics, campaign performance,
-                    KPIs, reports, audience insights and
-                    data-driven marketing decisions.
-                </span>
+<!-- ================= COURSE STRUCTURE MODAL ================= -->
 
-            </div>
+<div class="modal" id="structureModal">
 
+    <div class="modal-content">
 
+        <div class="modal-header">
 
-            <div class="module">
+            <h2>📚 Course Structure</h2>
 
-                <strong>🎯 Online Advertising</strong>
-
-                <span>
-                    Digital advertising concepts, campaign
-                    planning, audience targeting, ad creatives,
-                    performance tracking and optimization.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
- 
-                <strong>✍️ Content Marketing</strong>  
-        <span>
-                    Content strategy, copywriting, blogs,
-                    visual content, storytelling and
-                    digital brand communication.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>🤖 Artificial Intelligence for Marketing</strong>
-
-                <span>
-                    AI-powered content creation, marketing
-                    automation, idea generation, research,
-                    productivity and campaign assistance.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>🧠 AI Tools & Prompting</strong>
-
-                <span>
-                    Practical use of AI tools, prompt writing,
-                    AI-assisted content creation and workflow
-                    optimization.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>📧 Email & Digital Communication</strong>
-
-                <span>
-                    Email marketing concepts, campaign planning,
-                    audience segmentation and customer
-                    communication.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>🛒 E-Commerce & Online Business</strong>
-
-                <span>
-                    E-commerce fundamentals, online customer
-                    acquisition, digital branding and
-                    conversion strategies.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>📈 Campaign Optimization</strong>
-
-                <span>
-                    Campaign monitoring, performance analysis,
-                    conversion improvement and marketing
-                    optimization.
-                </span>
-
-            </div>
-
-
-
-            <div class="module">
-
-                <strong>🚀 Project Work</strong>
-
-                <span>
-                    Practical digital marketing projects,
-                    campaign planning, reporting and
-                    presentation.
-                </span>
-
+            <div class="close" onclick="closeModal('structureModal')">
+                ×
             </div>
 
         </div>
 
-    </div>
+        <div class="modal-body">
 
+            <h3>What You Will Learn</h3>
 
+            <p>
+                The Digital Marketing with AI course provides practical,
+                industry-oriented training covering digital marketing,
+                analytics, AI tools and real-world project work.
+            </p>
 
-    <div class="section">
+            <div class="module-grid">
 
-        <h4>Practical Training</h4>
+                <div class="module">
+                    📊 Business & Digital Marketing Fundamentals
+                </div>
 
-        <ul class="list">
+                <div class="module">
+                    🤖 Artificial Intelligence for Marketing
+                </div>
 
-            <li>Hands-on digital marketing activities</li>
+                <div class="module">
+                    🔎 Search Engine Optimization (SEO)
+                </div>
 
-            <li>SEO and keyword research exercises</li>
+                <div class="module">
+                    📱 Social Media Marketing
+                </div>
 
-            <li>Social media campaign planning</li>
+                <div class="module">
+                    📢 Online Advertising & Campaign Management
+                </div>
 
-            <li>AI-assisted content creation</li>
+                <div class="module">
+                    ✍️ Content Creation & Content Strategy
+                </div>
 
-            <li>Digital advertising exercises</li>
+                <div class="module">
+                    📈 Google Analytics & Marketing Analytics
+                </div>
 
-            <li>Analytics and performance reporting</li>
+                <div class="module">
+                    🎨 Creative Design & Visual Content
+                </div>
 
-            <li>Real-world project assignments</li>
+                <div class="module">
+                    🧠 AI Tools for Content & Marketing
+                </div>
 
-            <li>Project presentation and documentation</li>
+                <div class="module">
+                    📧 Email & Digital Communication
+                </div>
 
-        </ul>
+                <div class="module">
+                    🛒 E-Commerce & Online Business
+                </div>
 
-    </div>
+                <div class="module">
+                    💼 Practical Projects & Case Studies
+                </div>
 
+            </div>
 
+            <h3>Practical Training</h3>
 
-    <div class="back" onclick="closeDetails()">
-        ← Back to Course Details
+            <p>
+                Students will work on practical assignments, marketing
+                campaigns, content creation, analytics dashboards,
+                case studies and project-based activities.
+            </p>
+
+        </div>
+
     </div>
 
 </div>
 
 
+<!-- ================= SKILLS MODAL ================= -->
 
-<!-- =====================================================
-     SKILLS & CAREER OUTCOMES
-===================================================== -->
+<div class="modal" id="skillsModal">
 
-<div id="skills" class="detail-box">
+    <div class="modal-content">
 
-    <div class="detail-title">
+        <div class="modal-header">
 
-        <div class="big-icon">🤖</div>
+            <h2>🤖 Skills & Career Outcomes</h2>
 
-        <h2>Skills & Career Outcomes</h2>
-
-    </div>
-
-
-
-    <div class="section">
-
-        <h4>Digital Marketing Skills</h4>
-
-        <div class="skills">
-
-            <div class="skill">Digital Marketing</div>
-
-            <div class="skill">SEO</div>
-
-            <div class="skill">Social Media Marketing</div>
-
-            <div class="skill">Content Marketing</div>
-
-            <div class="skill">Online Advertising</div>
-
-            <div class="skill">Email Marketing</div>
-
-            <div class="skill">Digital Branding</div>
-
-            <div class="skill">Campaign Management</div>
-
-            <div class="skill">Marketing Analytics</div>
-
-            <div class="skill">Data Interpretation</div>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="section">
-
-        <h4>AI-Powered Skills</h4>
-
-        <div class="skills">
-
-            <div class="skill">AI Content Creation</div>
-
-            <div class="skill">Prompt Engineering</div>  
-          <div class="skill">AI-Assisted Research</div>
-
-            <div class="skill">AI Marketing Tools</div>
-
-            <div class="skill">Marketing Automation</div>
-
-            <div class="skill">AI Image & Creative Tools</div>
-
-            <div class="skill">AI Productivity</div>
-
-            <div class="skill">AI Campaign Assistance</div>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="section">
-
-        <h4>Career-Oriented Outcomes</h4>
-
-        <ul class="list">
-
-            <li>Digital Marketing Executive</li>
-
-            <li>Digital Marketing Associate</li>
-
-            <li>SEO Executive</li>
-
-            <li>Social Media Executive</li>
-
-            <li>Content Marketing Executive</li>
-
-            <li>Digital Advertising Executive</li>
-
-            <li>Marketing Analytics Assistant</li>
-
-            <li>Digital Content Creator</li>
-
-            <li>AI-Assisted Marketing Professional</li>
-
-            <li>Digital Business & Marketing Support Roles</li>
-
-        </ul>
-
-    </div>
-
-
-
-    <div class="section">
-
-        <h4>Additional Benefits</h4>
-
-        <div class="benefit-grid">
-
-            <div class="benefit">
-
-                <strong>💼 Industry Exposure</strong>
-
-                Practical understanding of current digital
-                marketing practices and workflows.
-
-            </div>
-
-            <div class="benefit">
-
-                <strong>🧪 Practical Training</strong>
-
-                Hands-on exercises and project-based learning.
-
-            </div>
-
-            <div class="benefit">
-
-                <strong>📊 Analytics Skills</strong>
-
-                Learn how to understand campaign performance
-                and marketing data.
-
-            </div>
-
-            <div class="benefit">
-
-                <strong>🚀 Career Preparation</strong>
-
-                Build practical skills for modern digital
-                marketing opportunities.
-
+            <div class="close" onclick="closeModal('skillsModal')">
+                ×
             </div>
 
         </div>
 
-    </div>
+        <div class="modal-body">
+
+            <h3>Key Skills</h3> 
+            <ul class="outcome-list">
+
+                <li>Digital Marketing Strategy</li>
+
+                <li>Search Engine Optimization (SEO)</li>
+
+                <li>Social Media Marketing</li>
+
+                <li>AI-Based Content Creation</li>
+
+                <li>Digital Advertising & Campaign Planning</li>
+
+                <li>Marketing Analytics & Reporting</li>
+
+                <li>Content Strategy & Brand Promotion</li>
+
+                <li>Data-Driven Marketing</li>
+
+                <li>AI Tools for Modern Marketing</li>
+
+                <li>Practical Project Management</li>
+
+            </ul>
 
 
+            <h3>Career Opportunities</h3>
 
-    <div class="back" onclick="closeDetails()">
-        ← Back to Course Details
+            <ul class="outcome-list">
+
+                <li>Digital Marketing Executive</li>
+
+                <li>SEO Executive</li>
+
+                <li>Social Media Executive</li>
+
+                <li>Content Marketing Executive</li>
+
+                <li>Digital Advertising Executive</li>
+
+                <li>Marketing Analyst</li>
+
+                <li>AI Marketing Assistant</li>
+
+                <li>Freelance Digital Marketing Professional</li>
+
+            </ul>
+
+        </div>
+
     </div>
 
 </div>
 
 
+<!-- ================= FEES MODAL ================= -->
 
-<!-- =====================================================
-     FEE STRUCTURE
-===================================================== -->
+<div class="modal" id="feesModal">
 
-<div id="fees" class="detail-box">
+    <div class="modal-content">
 
-    <div class="detail-title">
+        <div class="modal-header">
 
-        <div class="big-icon">💰</div>
+            <h2>💰 Fee Structure</h2>
 
-        <h2>Fee Structure</h2>
+            <div class="close" onclick="closeModal('feesModal')">
+                ×
+            </div>
+
+        </div>
+
+        <div class="modal-body">
+
+            <h3>Digital Marketing with AI – Fee Details</h3>
+
+            <p>
+                The applicable course fee varies according to the
+                institution category and student category.
+            </p>
+
+            <div class="table-wrapper">
+
+                <table class="fee-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Institution Category</th>
+                            <th>Student Category</th>
+                            <th>Course Fee</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Government / State-Funded University</td>
+                            <td>General Category</td>
+                            <td class="amount">₹3,791</td>
+                        </tr>
+
+                        <tr>
+                            <td>Government / State-Funded University</td>
+                            <td>SC / ST / OBC / MBC / EWS / Women</td>
+                            <td class="amount">₹1,896</td>
+                        </tr>
+
+                        <tr>
+                            <td>Private College</td>
+                            <td>General Category</td>
+                            <td class="amount">₹9,477</td>
+                        </tr>
+
+                        <tr>
+                            <td>Private College</td>
+                            <td>SC / ST / OBC / MBC / EWS / Women</td>
+                            <td class="amount">₹4,739</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="note">
+                <strong>Note:</strong>
+                The above fee structure is based on the course information
+                provided for the Rajasthan Finishing School programme.
+                Students should verify the final applicable fee at the
+                time of admission.
+            </div>
+
+        </div>
 
     </div>
 
+</div>
 
 
-    <div class="section">
+<!-- ================= ELIGIBILITY MODAL ================= -->
 
-        <h4>Digital Marketing with AI</h4>
+<div class="modal" id="eligibilityModal">
 
+    <div class="modal-content">
 
-        <table class="fee-table">
+        <div class="modal-header">
 
-            <tr>
+            <h2>🎓 Eligibility</h2>
 
-                <th>
-                    Institution Type
-                </th>
+            <div class="close" onclick="closeModal('eligibilityModal')">
+                ×
+            </div>
 
-                <th>
-                    Student Category
-                </th>
+        </div>
 
-                <th>
-                    Course Fee
-                </th>
+        <div class="modal-body">
 
-            </tr>
+            <h3>Who Can Apply?</h3>
 
+            <ul class="eligibility-list"> 
+                <li>
+                    Students of Government and Private Colleges can apply.
+                </li>
 
+                <li>
+                    Students studying in State-Funded Universities can apply.
+                </li>
 
-            <tr>
+                <li>
+                    Graduates / Pass-out students are eligible.
+                </li>
 
-                <td rowspan="2">
-                    Government / State-Funded University
-                </td>
+                <li>
+                    UG / PG Final Year students can apply.
+                </li>
 
-                <td>
-                    General Category (Male)
-                </td>
+                <li>
+                    Students studying in Semester-IV or above can apply,
+                    as applicable to the programme.
+                </li>
 
-                <td>
-                    ₹3,791
-                </td>
+                <li>
+                    Recommended age group: 18 to 35 years.
+                </li>
 
-            </tr>
-
-
-
-            <tr>
-
-                <td>
-                    SC / ST / OBC / MBC / EWS / Female
-                </td>
-
-                <td>
-                    ₹1,896
-                </td>
-
-            </tr>
+            </ul>
 
 
+            <h3>Required Documents</h3>
 
-            <tr>
+            <div class="documents">
 
-                <td rowspan="2">
-                    Private Institution
-                </td>
+                <div class="document">
+                    📄 10th Marksheet
+                </div>
 
-                <td>
-                    General Category (Male)
-                </td>
+                <div class="document">
+                    📄 12th Marksheet
+                </div>
 
-                <td>
-                    ₹9,477
-                </td>
+                <div class="document">
+                    🪪 Aadhaar Card
+                </div>
 
-            </tr>
+                <div class="document">
+                    📑 SC / ST / OBC / MBC / EWS Certificate
+                </div>
 
+                <div class="document">
+                    🎓 College ID
+                </div>
 
-
-            <tr>
-
-                <td>
-                    SC / ST / OBC / MBC / EWS / Female
-                </td>
-
-                <td>
-                    ₹4,739
-                </td>
-
-            </tr>
-
-        </table>
+            </div>
 
 
+            <div class="info-box">
 
-        <div class="note">
+                <strong>Important:</strong>
 
-            <strong>Note:</strong>
+                <p>
+                    Eligibility and required documents may be subject to
+                    the applicable programme guidelines at the time of
+                    admission.
+                </p>
 
-            The above fee structure is
-          
-              
-/* ================= COURSE MODULES ================= */
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <strong>Rajasthan Finishing School</strong><br>
+
+    Digital Marketing with AI | 540 Hours | 60 Seats
+
+</footer>
+
+
+<script>
+
+/* OPEN MODAL */
+
+function openModal(id){
+
+    document.getElementById(id).style.display = "block";
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* CLOSE MODAL */
+
+function closeModal(id){
+
+    document.getElementById(id).style.display = "none";
+
+    document.body.style.overflow = "auto";
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+window.onclick = function(event){
+
+    if(event.target.classList.contains("modal")){
+
+        event.target.style.display = "none";
+
+        document.body.style.overflow = "auto";
+    }
+
+}
+
+
+/* CLOSE WITH ESC KEY */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        document.querySelectorAll(".modal").forEach(function(modal){
+
+            modal.style.display = "none";
+
+        });
+
+        document.body.style.overflow = "auto";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
