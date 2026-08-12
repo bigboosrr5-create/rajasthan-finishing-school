@@ -1,976 +1,965 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="AI Business Analyst Course - Rajasthan Finishing School, Government Dungar College, Bikaner">
-
-    <title>AI Business Analyst | Rajasthan Finishing School</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7fb;
-            color: #172033;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        .site-header {
-            background: #ffffff;
-            border-bottom: 1px solid #e4e8ef;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            width: min(1150px, 92%);
-            margin: auto;
-            min-height: 75px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #14213d;
-        }
-
-        .brand-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: linear-gradient(135deg, #183b78, #2563eb);
-            color: white;
-            font-weight: 800;
-            font-size: 16px;
-        }
-
-        .brand-title {
-            font-size: 18px;
-            font-weight: 800;
-            letter-spacing: .3px;
-        }
-
-        .brand-subtitle {
-            font-size: 12px;
-            color: #687386;
-            margin-top: 2px;
-        }
-
-        .back-btn {
-            background: #173f7a;
-            color: #ffffff;
-
-            padding: 11px 18px;
-            border-radius: 8px;
-
-            font-size: 14px;
-            font-weight: 700;
-
-            transition: .25s;
-        }
-
-        .back-btn:hover {
-            background: #0f2e5c;
-            transform: translateY(-1px);
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .course-hero {
-            background:
-                linear-gradient(135deg, #0d2d5c, #1769aa);
-
-            color: white;
-            padding: 70px 0;
-        }
-
-        .container {
-            width: min(1150px, 92%);
-            margin: auto;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.6fr .8fr;
-            gap: 35px;
-            align-items: center;
-        }
-
-        .eyebrow {
-            display: inline-block;
-
-            background: rgba(255,255,255,.13);
-            border: 1px solid rgba(255,255,255,.25);
-
-            padding: 7px 13px;
-            border-radius: 30px;
-
-            font-size: 13px;
-            font-weight: 700;
-
-            margin-bottom: 18px;
-        }
-
-        .course-hero h1 {
-            font-size: clamp(34px, 5vw, 58px);
-            line-height: 1.05;
-            margin-bottom: 18px;
-        }
-
-        .hero-description {
-            max-width: 700px;
-            font-size: 18px;
-            color: #e8f2ff;
-            margin-bottom: 25px;
-        }
-
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .meta-box {
-            background: rgba(255,255,255,.12);
-            border: 1px solid rgba(255,255,255,.18);
-
-            padding: 10px 14px;
-            border-radius: 8px;
-
-            font-size: 14px;
-        }
-
-        .hero-side {
-            background: white;
-            color: #172033;
-
-            padding: 28px;
-            border-radius: 18px;
-            box-shadow: 0 20px 50px rgba(0,0,0,.18);
-        }
-
-        .hero-side h3 {
-            color: #173f7a;
-            margin-bottom: 15px;
-        }
-
-        .hero-side p {
-            margin-bottom: 10px;
-            color: #566176;
-        }
-
-        .hero-side strong {
-            color: #172033;
-        }
-
-
-        /* =========================
-           QUICK BOXES
-        ========================= */
-
-        .quick-section {
-            padding: 50px 0 20px;
-        }
-
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .quick-card {
-            background: white;
-            border: 1px solid #e4e8ef;
-            border-radius: 14px;
-
-            padding: 24px 18px;
-
-            text-align: center;
-
-            box-shadow: 0 8px 25px rgba(20,35,60,.06);
-
-            transition: .25s;
-        }
-
-        .quick-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(20,35,60,.12);
-        }
-
-        .quick-icon {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .quick-card h3 {
-            color: #173f7a;
-            font-size: 17px;
-            margin-bottom: 7px;
-        }
-
-        .quick-card p {
-            color: #667085;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-
-        .quick-card a {
-            display: inline-block;
-
-            background: #173f7a;
-            color: white;
-
-            padding: 8px 13px;
-            border-radius: 7px;
-
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-
-        /* =========================
-           COMMON SECTION
-        ========================= */
-
-        .content-section {
-            padding: 55px 0;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .section-heading span {
-            color: #2563eb;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .section-heading h2 {
-            font-size: 32px;
-            margin-top: 5px;
-            color: #172033;
-        }
-
-        .section-heading p {
-            color: #687386;
-            max-width: 700px;
-            margin: 8px auto 0;
-        }
-
-
-        /* =========================
-           COURSE STRUCTURE
-        ========================= */
-
-        .structure-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .structure-card {
-            background: white;
-            border-radius: 14px;
-            border: 1px solid #e4e8ef;
-
-            padding: 25px;
-
-            box-shadow: 0 8px 25px rgba(20,35,60,.06);
-        }
-
-        .structure-number {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background: #eaf2ff;
-            color: #173f7a;
-
-            border-radius: 10px;
-
-            font-weight: 800;
-            margin-bottom: 14px;
-        }
-
-        .structure-card h3 {
-            color: #173f7a;
-            margin-bottom: 10px;
-        }
-
-        .structure-card ul {
-            padding-left: 20px;
-        }
-
-        .structure-card li {
-            margin-bottom: 7px;
-            color: #596579;
-        }
-
-
-        /* =========================
-           SKILL OUTCOMES
-        ========================= */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .skill-card {
-            background: white;
-            border: 1px solid #e4e8ef;
-
-            padding: 23px;
-            border-radius: 14px;
-
-            box-shadow: 0 8px 25px rgba(20,35,60,.06);
-        }
-
-        .skill-card h3 {
-            font-size: 17px;
-            color: #173f7a;
-            margin-bottom: 8px;
-        } .skill-card p {
-            color: #687386;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           FEES
-        ========================= */
-
-        .fee-table-wrapper {
-            background: white;
-            border: 1px solid #e4e8ef;
-            border-radius: 15px;
-
-            overflow-x: auto;
-
-            box-shadow: 0 8px 25px rgba(20,35,60,.06);
-        }
-
-        .fee-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 700px;
-        }
-
-        .fee-table th {
-            background: #173f7a;
-            color: white;
-
-            padding: 15px;
-            text-align: left;
-        }
-
-        .fee-table td {
-            padding: 14px 15px;
-            border-bottom: 1px solid #e8ecf2;
-            color: #505d70;
-        }
-
-        .fee-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .fee-highlight {
-            font-weight: 800;
-            color: #173f7a !important;
-        }
-
-        .fee-note {
-            margin-top: 15px;
-            background: #fff8e6;
-            border: 1px solid #f3dfaa;
-
-            padding: 14px 17px;
-            border-radius: 10px;
-
-            color: #695526;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           ELIGIBILITY
-        ========================= */
-
-        .eligibility-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-        }
-
-        .eligibility-card {
-            background: white;
-            border: 1px solid #e4e8ef;
-            border-radius: 15px;
-
-            padding: 26px;
-
-            box-shadow: 0 8px 25px rgba(20,35,60,.06);
-        }
-
-        .eligibility-card h3 {
-            color: #173f7a;
-            margin-bottom: 15px;
-        }
-
-        .eligibility-list {
-            list-style: none;
-        }
-
-        .eligibility-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-            color: #596579;
-        }
-
-        .eligibility-list li::before {
-            content: "✓";
-
-            position: absolute;
-            left: 0;
-
-            color: #16834b;
-            font-weight: 800;
-        }
-
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta-section {
-            padding: 60px 0;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, #173f7a, #0e5fa8);
-
-            color: white;
-
-            border-radius: 20px;
-
-            padding: 45px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 25px;
-        }
-
-        .cta-box h2 {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
-
-        .cta-box p {
-            color: #e4efff;
-        }
-
-        .register-btn {
-            display: inline-block;
-
-            background: white;
-            color: #173f7a;
-
-            padding: 13px 22px;
-            border-radius: 9px;
-
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #101827;
-            color: #dce4f0;
-
-            padding: 35px 0;
-            text-align: center;
-        }
-
-        footer h3 {
-            margin-bottom: 6px;
-        }
-
-        footer p {
-            color: #9ba8ba;
-            font-size: 14px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .quick-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .eligibility-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-
-        @media (max-width: 600px) { 
-           .header-container {
-                min-height: 65px;
-            }
-
-            .brand-title {
-                font-size: 15px;
-            }
-
-            .brand-subtitle {
-                font-size: 10px;
-            }
-
-            .brand-logo {
-                width: 42px;
-                height: 42px;
-            }
-
-            .back-btn {
-                padding: 9px 12px;
-                font-size: 12px;
-            }
-
-            .course-hero {
-                padding: 50px 0;
-            }
-
-            .course-hero h1 {
-                font-size: 36px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            .quick-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-            }
-
-            .quick-card {
-                padding: 18px 10px;
-            }
-
-            .quick-card h3 {
-                font-size: 14px;
-            }
-
-            .structure-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-heading h2 {
-                font-size: 27px;
-            }
-
-            .cta-box {
-                padding: 30px 22px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .cta-box h2 {
-                font-size: 25px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI – Business Analyst | Government Dungar College Bikaner</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#17233c;
+    line-height:1.6;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* HEADER */
+
+.hero{
+    background:linear-gradient(135deg,#071d49,#123d82,#087ca5);
+    color:white;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    margin-bottom:25px;
+}
+
+.hero .college{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#dbeafe;
+}
+
+.hero h1{
+    font-size:42px;
+    margin:8px 0;
+    letter-spacing:.5px;
+}
+
+.hero h2{
+    font-size:23px;
+    font-weight:500;
+    color:#ffe45e;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:16px;
+}
+
+/* COURSE INFO */
+
+.info-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.info-box{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border:1px solid #e5eaf2;
+}
+
+.info-icon{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.info-box h3{
+    font-size:16px;
+    color:#4b5563;
+}
+
+.info-box strong{
+    display:block;
+    font-size:21px;
+    color:#0b4f8a;
+    margin-top:4px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin:35px 0 20px;
+}
+
+.section-title h2{
+    font-size:29px;
+    color:#0b2d5c;
+}
+
+.section-title p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+/* FOUR CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:28px 22px;
+    cursor:pointer;
+    border:1px solid #e1e8f0;
+    box-shadow:0 7px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.13);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:5px;
+    height:100%;
+    background:#0b72b9;
+}
+
+.card-icon{
+    width:62px;
+    height:62px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    background:#e9f5ff;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#102d56;
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.click-text{
+    margin-top:13px;
+    color:#0878bd;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* DETAILS */
+
+.detail-section{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin-top:25px;
+    box-shadow:0 7px 25px rgba(0,0,0,.08);
+    display:none;
+    animation:fadeIn .35s ease;
+}
+
+.detail-section.active{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.detail-section h2{
+    color:#0a3770;
+    margin-bottom:20px;
+    font-size:27px;
+}
+
+.detail-section h3{
+    color:#123f76;
+    margin:20px 0 10px;
+}
+
+/* LIST */
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    padding:11px 0;
+    border-bottom:1px solid #edf1f5;
+    position:relative;
+    padding-left:30px;
+}
+
+.list li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:10px;
+    width:21px;
+    height:21px;
+    border-radius:50%;
+    background:#0c8a55;
+    color:white;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* COURSE STRUCTURE */
+
+.structure-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.structure-box{
+    border:1px solid #e2e8f0;
+    padding:18px;
+    border-radius:13px;
+    background:#f8fafc;
+}
+
+.structure-box h4{
+    color:#0a4f8b;
+    margin-bottom:7px;
+}
+
+/* FEES */ .fees-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.fees-table th{
+    background:#0b3971;
+    color:white;
+    padding:14px 10px;
+    text-align:center;
+}
+
+.fees-table td{
+    padding:13px 10px;
+    text-align:center;
+    border:1px solid #e2e8f0;
+}
+
+.fees-table tr:nth-child(even){
+    background:#f8fafc;
+}
+
+.price{
+    font-weight:bold;
+    color:#0b7a4b;
+    font-size:17px;
+}
+
+/* NOTE */
+
+.note{
+    background:#fff8df;
+    border-left:5px solid #f3b400;
+    padding:15px;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+/* ELIGIBILITY */
+
+.eligibility-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.eligibility-box{
+    background:#f8fafc;
+    border:1px solid #e4eaf1;
+    padding:18px;
+    border-radius:13px;
+}
+
+.eligibility-box h4{
+    color:#0b4e88;
+    margin-bottom:8px;
+}
+
+/* CONTACT */
+
+.contact{
+    margin-top:30px;
+    background:linear-gradient(135deg,#092b5b,#087ca5);
+    color:white;
+    padding:28px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:10px;
+}
+
+.phone{
+    font-size:27px;
+    font-weight:bold;
+    color:#ffe45e;
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px 10px;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero h2{
+        font-size:18px;
+    }
+
+    .info-row{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .structure-grid,
+    .eligibility-grid{
+        grid-template-columns:1fr;
+    }
+
+    .detail-section{
+        padding:20px 16px;
+    }
+
+    .fees-table{
+        font-size:12px;
+    }
+
+    .fees-table th,
+    .fees-table td{
+        padding:9px 5px;
+    }
+}
+
+</style>
 </head>
 
 
 <body>
 
+<div class="container">
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HERO -->
 
-<header class="site-header">
+<section class="hero">
 
-    <div class="header-container">
+<div class="college">
+RAJASTHAN FINISHING SCHOOL (RFS) INITIATIVE
+</div>
 
-        <a href="index.html" class="brand">
+<h1>AI – BUSINESS ANALYST</h1>
 
-            <div class="brand-logo">
-                RF
-            </div>
+<h2>AI & Data Analytics for Future Careers</h2>
 
-            <div>
-                <div class="brand-title">
-                    RAJASTHAN FINISHING SCHOOL
-                </div>
+<p>
+Government Dungar College, Bikaner, Rajasthan
+</p>
 
-                <div class="brand-subtitle">
-                    Government Dungar College, Bikaner
-                </div>
-            </div>
-
-        </a>
+</section>
 
 
-        <a href="index.html#courses" class="back-btn">
-            ← Back to Courses
-        </a>
+<!-- COURSE QUICK INFORMATION -->
 
-    </div>
+<div class="info-row">
 
-</header>
+<div class="info-box">
+<div class="info-icon">⏱️</div>
+<h3>Course Duration</h3>
+<strong>540 Hours</strong>
+</div>
 
+<div class="info-box">
+<div class="info-icon">🎓</div>
+<h3>Seats Available</h3>
+<strong>60 Seats</strong>
+</div>
 
+<div class="info-box">
+<div class="info-icon">💼</div>
+<h3>Sector</h3>
+<strong>IT & ITES</strong>
+</div>
 
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="course-hero">
-
-    <div class="container hero-grid">
-
-        <div>
-
-            <span class="eyebrow">
-                RAJASTHAN FINISHING SCHOOL
-            </span>
-
-            <h1>
-                AI Business Analyst
-            </h1>
-
-            <p class="hero-description">
-                Industry-oriented training in Business Analysis,
-                Data Analytics, Artificial Intelligence tools and
-                data-driven decision making.
-            </p>
+</div>
 
 
-            <div class="hero-meta">
+<!-- FOUR MAIN OPTIONS -->
 
-                <div class="meta-box">
-                    Sector: IT & ITES
-                </div>
+<div class="section-title">
 
-                <div class="meta-box">
-                    Duration: 540 Hours
-                </div>
+<h2>Explore Course Details</h2>
 
-                <div class="meta-box">
-                    Seats: 60
-                </div>
+<p>
+Click on any section below to view complete information.
+</p>
 
-                <div class="meta-box">
-                    Training: Government Dungar College, Bikaner
-                </div>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="hero-side">
+<div class="cards">
 
-            <h3>
-                Course at a Glance
-            </h3>
 
-            <p>
-                <strong>Course:</strong>
-                AI Business Analyst
-            </p>
+<!-- COURSE STRUCTURE -->
 
-            <p>
-                <strong>Sector:</strong>
-                IT & ITES
-            </p>
+<div class="card" onclick="showSection('structure')">
 
-            <p>
-                <strong>Duration:</strong>
-                540 Hours
-            </p>
+<div class="card-icon">
+📚
+</div>
 
-            <p>
-                <strong>Seats:</strong>
-                60
-            </p>
+<h3>Course Structure</h3>
 
-            <p>
-                <strong>Location:</strong>
-                Government Dungar College, Bikaner
-            </p>
+<p>
+Explore the complete structure, modules and learning areas of the AI – Business Analyst course.
+</p>
 
-        </div>
+<div class="click-text">
+View Course Structure →
+</div>
 
-    </div>
+</div>
+
+
+<!-- SKILLS -->
+
+<div class="card" onclick="showSection('skills')">
+
+<div class="card-icon">
+🧠
+</div>
+
+<h3>Skills & Learning Outcomes</h3>
+
+<p>
+Learn the practical technical and business skills covered during the course.
+</p>
+
+<div class="click-text">
+View Skills →
+</div>
+
+</div>
+
+
+<!-- FEES -->
+
+<div class="card" onclick="showSection('fees')">
+
+<div class="card-icon">
+💰
+</div>
+
+<h3>Fees Structure</h3>
+
+<p>
+View the complete course fee structure for different categories and institutions.
+</p>
+
+<div class="click-text">
+View Fee Details →
+</div>
+
+</div>
+
+
+<!-- ELIGIBILITY -->
+
+<div class="card" onclick="showSection('eligibility')">
+
+<div class="card-icon">
+🎓
+</div>
+
+<h3>Eligibility</h3>
+
+<p>
+Check the eligibility criteria, age limit and documents required for admission.
+</p>
+
+<div class="click-text">
+View Eligibility →
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- COURSE STRUCTURE DETAIL -->
+
+<section id="structure" class="detail-section">
+
+<h2>📚 Course Structure</h2>
+    <p>
+The AI – Business Analyst programme is designed to provide practical knowledge of Business Analysis, Artificial Intelligence, Data Analytics and modern digital tools.
+</p>
+
+
+<div class="structure-grid">
+
+<div class="structure-box">
+
+<h4>📊 Business Analysis Fundamentals</h4>
+
+<p>
+Introduction to Business Analysis, business processes, problem identification, stakeholder analysis and business decision-making.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>🤖 Artificial Intelligence</h4>
+
+<p>
+Fundamentals of Artificial Intelligence, AI applications in business, AI-assisted decision making and emerging AI technologies.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>🗄️ SQL & Data Management</h4>
+
+<p>
+Database concepts, SQL fundamentals, querying data, filtering, sorting, aggregation and extracting useful business information.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>📈 Advanced Excel</h4>
+
+<p>
+Advanced formulas, data analysis, data cleaning, lookup functions, pivot tables and business reporting using Excel.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>📊 Power BI</h4>
+
+<p>
+Data visualization, dashboards, reports, business intelligence and presenting data-driven insights.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>📄 Business Requirement Documentation</h4>
+
+<p>
+Requirement gathering, requirement analysis, documentation, process mapping and preparing business requirement documents.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>📱 Dashboard & Reporting</h4>
+
+<p>
+Creating professional dashboards, reports and visual presentations for business decision-making.
+</p>
+
+</div>
+
+
+<div class="structure-box">
+
+<h4>💼 Case Studies & Project Work</h4>
+
+<p>
+Practical case studies, real-world business problems, project-based learning and industry-oriented assignments.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- =========================
-     QUICK FOUR BOXES
-========================= -->
+<!-- SKILLS DETAIL -->
 
-<section class="quick-section">
+<section id="skills" class="detail-section">
 
-    <div class="container">
+<h2>🧠 Skills & Learning Outcomes</h2>
 
-        <div class="quick-grid">
-
-
-            <div class="quick-card"> 
-        <div class="quick-icon">
-                    📚
-                </div>
-
-                <h3>
-                    Course Structure
-                </h3>
-
-                <p>
-                    Course modules and learning areas
-                </p>
-
-                <a href="#course-structure">
-                    View Details
-                </a>
-
-            </div>
+<p>
+After completing the programme, learners will develop practical skills required for entry-level Business Analyst and data-oriented roles.
+</p>
 
 
-            <div class="quick-card">
+<ul class="list">
 
-                <div class="quick-icon">
-                    🎯
-                </div>
+<li>Business Analysis Fundamentals</li>
 
-                <h3>
-                    Skill Outcomes
-                </h3>
+<li>Understanding of Artificial Intelligence and its business applications</li>
 
-                <p>
-                    Skills students will develop
-                </p>
+<li>Data Analysis and Interpretation</li>
 
-                <a href="#skill-outcomes">
-                    View Details
-                </a>
+<li>Advanced Microsoft Excel</li>
 
-            </div>
+<li>SQL and Database Querying</li>
 
+<li>Power BI and Data Visualization</li>
 
-            <div class="quick-card">
+<li>Business Dashboard Development</li>
 
-                <div class="quick-icon">
-                    ₹
-                </div>
+<li>Business Requirement Documentation</li>
 
-                <h3>
-                    Fees Structure
-                </h3>
+<li>Problem Solving and Analytical Thinking</li>
 
-                <p>
-                    Category-wise course fees
-                </p>
+<li>Case Study Analysis</li>
 
-                <a href="#fees">
-                    View Fees
-                </a>
+<li>Project Documentation and Reporting</li>
 
-            </div>
+<li>Presentation and Business Communication</li>
+
+<li>Practical Training and Project Work</li>
+
+</ul>
 
 
-            <div class="quick-card">
+<h3>🚀 Career-Oriented Learning</h3>
 
-                <div class="quick-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Eligibility
-                </h3>
-
-                <p>
-                    Who can apply for the course
-                </p>
-
-                <a href="#eligibility">
-                    Check Eligibility
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+<p>
+The programme focuses on practical and industry-oriented skills that can support learners in building careers in Business Analysis, Data Analytics, Business Intelligence and related IT/ITES roles.
+</p>
 
 </section>
 
 
 
-<!-- =========================
-     COURSE STRUCTURE
-========================= -->
+<!-- FEES DETAIL -->
 
-<section class="content-section" id="course-structure">
+<section id="fees" class="detail-section">
 
-    <div class="container">
+<h2>💰 Fees Structure</h2>
 
-        <div class="section-heading">
-
-            <span>
-                COURSE STRUCTURE
-            </span>
-
-            <h2>
-                What You Will Learn
-            </h2>
-
-            <p>
-                The AI Business Analyst program combines
-                business understanding, data analysis,
-                AI tools and practical decision-making skills.
-            </p>
-
-        </div>
+<p>
+The following fee structure is based on the course information provided for the AI – Business Analyst programme.
+</p>
 
 
-        <div class="structure-grid">
+<table class="fees-table">
+
+<tr>
+
+<th>Institution Type</th>
+
+<th>Category</th>
+
+<th>Course Fee</th>
+
+</tr>
 
 
-            <div class="structure-card">
+<tr>
 
-                <div class="structure-number">
-                    01
-                </div>
+<td rowspan="2">
+Government College / State-Funded University
+</td>
 
-                <h3>
-                    Business Analysis Fundamentals
-                </h3>
+<td>
+General Category (Male)
+</td>
 
-                <ul>
+<td class="price">
+₹4,536
+</td>
 
-                    <li>
-                        Introduction to Business Analysis
-                    </li>
-
-                    <li>
-                        Business requirements and problem identification
-                    </li>
-
-                    <li>
-                        Requirement gathering and documentation
-                    </li>
-
-                    <li>
-                        Business process understanding
-                    </li>
-
-                    <li>
-                        Data-driven business decision making
-                    </li>
-
-                </ul>
-
-            </div>
+</tr>
 
 
-            <div class="structure-card">
+<tr>
 
-                <div class="structure-number">
-                    02
-                </div>
+<td>
+SC / ST / OBC / MBC / EWS / Female
+</td>
 
-                <h3>
-                    Data Analytics
-                </h3>
+<td class="price">
+₹2,268
+</td>
 
-                <ul>
+</tr>
 
-                    <li>
-                        Data collection and preparation
-                    </li>
 
-                    <li>
-                        Data cleaning and analysis
-                    </li>
+<tr>
 
-                    <li>
-                        Spreadsheet-based analysis
-                    </li>
+<td rowspan="2">
+Private College
+</td>
 
-                    <li>
-                        Data visualization
-                    </l
-        
+<td>
+General Category (Male)
+</td>
+
+<td class="price">
+₹11,340
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+SC / ST / OBC / MBC / EWS / Female
+</td>
+
+<td class="price">
+₹5,670
+</td>
+
+</tr>
+
+</table>
+
+
+<div class="note">
+
+<strong>Important:</strong>
+
+The above fees are shown as course fees (Non-Refundable) according to the provided course information. Applicants should confirm the applicable fee at the time of admission.
+
+</div>
+
+</section>
+
+
+
+<!-- ELIGIBILITY DETAIL -->
+
+<section id="eligibility" class="detail-section"> 
+    <h2>🎓 Eligibility</h2>
+
+<p>
+Candidates meeting the following eligibility conditions can apply for the AI – Business Analyst programme.
+</p>
+
+
+<div class="eligibility-grid">
+
+
+<div class="eligibility-box">
+
+<h4>🎓 Educational Eligibility</h4>
+
+<p>
+Students studying in or graduating from Government and Private Colleges and State-Funded Universities may apply, subject to the applicable course admission guidelines.
+</p>
+
+</div>
+
+
+<div class="eligibility-box">
+
+<h4>📚 Student Categories</h4>
+
+<p>
+Pass-out students and students studying in UG/PG Final Year and Semester-IV may apply, as applicable under the programme guidelines.
+</p>
+
+</div>
+
+
+<div class="eligibility-box">
+
+<h4>🎂 Age Limit</h4>
+
+<p>
+Minimum age: <strong>18 Years</strong><br>
+Maximum age: <strong>35 Years</strong>
+</p>
+
+</div>
+
+
+<div class="eligibility-box">
+
+<h4>🏫 Eligible Institutions</h4>
+
+<p>
+Students from Government Colleges, Private Colleges and eligible State-Funded Universities can apply according to the applicable guidelines.
+</p>
+
+</div>
+
+</div>
+
+
+<h3>📄 Documents Required</h3>
+
+<ul class="list">
+
+<li>10th Marksheet</li>
+
+<li>12th Marksheet</li>
+
+<li>Aadhaar Card</li>
+
+<li>SC / ST / OBC / EWS Certificate, if applicable</li>
+
+<li>College ID</li>
+
+<li>Educational qualification documents</li>
+
+</ul>
+
+
+<div class="note">
+
+<strong>Note:</strong>
+Eligibility and admission requirements may be subject to the official programme guidelines and verification of documents.
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>📞 For More Information</h2>
+
+<p>
+Contact the designated course coordinator / nodal officer for admission-related information.
+</p>
+
+<div class="phone">
+📱 9636688132
+</div>
+
+<p>
+Government Dungar College, Bikaner, Rajasthan
+</p>
+
+</section>
+
+
+<footer>
+
+AI – Business Analyst | Rajasthan Finishing School (RFS) Initiative
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* SHOW / HIDE COURSE DETAILS */
+
+function showSection(sectionId){
+
+    const sections = document.querySelectorAll('.detail-section');
+
+    sections.forEach(function(section){
+        section.classList.remove('active');
+    });
+
+    const selected = document.getElementById(sectionId);
+
+    selected.classList.add('active');
+
+    setTimeout(function(){
+
+        selected.scrollIntoView({
+            behavior:'smooth',
+            block:'start'
+        });
+
+    },100);
+
+}
+
+</script>
+
+</body>
+</html>
+    
