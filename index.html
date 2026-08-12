@@ -1,274 +1,1386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rajasthan Finishing School - Government Dungar College, Bikaner">
-  <title>Rajasthan Finishing School | Government Dungar College, Bikaner</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Rajasthan Finishing School, Government Dungar College, Bikaner">
+
+<title>Rajasthan Finishing School | Government Dungar College, Bikaner</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#14213d;
+    background:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1250px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+.site-header{
+    background:#061f43;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.18);
+}
+
+.nav-wrap{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-logo{
+    width:58px;
+    height:62px;
+    border:2px solid #f8b51b;
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    color:#fff;
+}
+
+.brand-logo span{
+    border:2px solid #fff;
+    padding:4px 6px;
+}
+
+.brand-title{
+    font-size:20px;
+    line-height:1;
+    font-weight:800;
+}
+
+.brand-subtitle{
+    color:#f8b51b;
+    font-size:12px;
+    margin-top:6px;
+    font-weight:bold;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:23px;
+}
+
+.nav a{
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 0;
+}
+
+.nav a:hover{
+    color:#f8b51b;
+}
+
+.nav-register{
+    background:#f8b51b;
+    color:#111!important;
+    padding:11px 18px!important;
+    border-radius:5px;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(120deg,#eef6ff,#f8fbff);
+}
+
+.hero-grid{
+    min-height:450px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:35px;
+}
+
+.hero-copy{
+    padding:45px 0;
+}
+
+.eyebrow{
+    color:#0754a5;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.hero h1{
+    font-size:50px;
+    line-height:1.08;
+    margin:10px 0 18px;
+    color:#061f43;
+}
+
+.hero h1 span{
+    color:#e4a500;
+}
+
+.hero-text{
+    font-size:17px;
+    color:#536174;
+    max-width:620px;
+    margin-bottom:25px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:5px;
+    font-weight:800;
+}
+
+.btn-dark{
+    background:#061f43;
+    color:#fff;
+}
+
+.btn-gold{
+    background:#f8b51b;
+    color:#111;
+}
+
+.hero-image{
+    min-height:350px;
+    border-radius:10px;
+    background:
+    linear-gradient(135deg,#0b4382,#83b8e5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.hero-image-box{
+    border:2px solid #f8b51b;
+    padding:35px;
+    background:rgba(0,0,0,.18);
+}
+
+.hero-image-box h2{
+    font-size:30px;
+}
+
+.hero-image-box p{
+    margin-top:8px;
+    color:#f8b51b;
+    font-weight:bold;
+}
+
+/* COURSES */
+
+.course-section{
+    padding:45px 0;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-kicker{
+    color:#0754a5;
+    font-size:12px;
+    letter-spacing:1.5px;
+    font-weight:800;
+}
+
+.section-heading h2{
+    color:#061f43;
+    font-size:34px;
+    margin-top:5px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.course-card{
+    border-radius:10px;
+    padding:25px;
+    min-height:285px;
+    border:1px solid #e0e6ee;
+    transition:.25s;
+}
+
+.course-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.1);
+}
+
+.blue-card{
+    background:#edf6ff;
+}
+
+.green-card{
+    background:#eff9ee;
+}
+
+.peach-card{
+    background:#fff3ea;
+} 
+  .course-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#fff;
+    display:grid;
+    place-items:center;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.course-card h3{
+    color:#061f43;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.course-card p{
+    color:#596679;
+    font-size:14px;
+    min-height:68px;
+}
+
+.badge{
+    display:inline-block;
+    background:#0754a5;
+    color:white;
+    padding:4px 8px;
+    border-radius:3px;
+    font-size:10px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.details-link{
+    display:inline-block;
+    margin-top:12px;
+    color:#0754a5;
+    font-weight:bold;
+}
+
+/* TRUST */
+
+.trust{
+    background:#f7f9fc;
+    border-top:1px solid #e2e7ef;
+    border-bottom:1px solid #e2e7ef;
+    padding:25px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.trust-box{
+    background:#fff;
+    padding:18px;
+    border-radius:7px;
+    border:1px solid #e2e7ef;
+}
+
+.trust-box strong{
+    display:block;
+    color:#061f43;
+    margin-bottom:4px;
+}
+
+.trust-box span{
+    color:#687587;
+    font-size:13px;
+}
+
+/* ABOUT */
+
+.about{
+    padding:65px 0;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:35px;
+    color:#061f43;
+    line-height:1.2;
+}
+
+.about h2 span{
+    color:#e4a500;
+}
+
+.about-text p{
+    margin-bottom:13px;
+    color:#596679;
+}
+
+/* PROGRAMS */
+
+.programs{
+    padding:60px 0;
+    background:#f7f9fc;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.program-box{
+    background:white;
+    border:1px solid #e0e6ee;
+    border-radius:8px;
+    padding:25px;
+}
+
+.current{
+    background:#061f43;
+    color:white;
+}
+
+.program-box h3{
+    color:#061f43;
+    margin-bottom:12px;
+}
+
+.current h3{
+    color:white;
+}
+
+.program-box p,
+.program-box li{
+    font-size:14px;
+    color:#667386;
+}
+
+.current p{
+    color:#dce5f1;
+}
+
+.program-box ul{
+    padding-left:20px;
+}
+
+.program-box li{
+    margin:6px 0;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:60px 0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    min-height:180px;
+    border-radius:8px;
+    background:linear-gradient(135deg,#0b4382,#b9d7ef);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    padding:20px;
+}
+
+/* CTA */
+
+.cta{
+    background:#061f43;
+    color:white;
+    padding:35px 0;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.cta h2{
+    font-size:24px;
+}
+
+.cta h2 span{
+    color:#f8b51b;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:65px 0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    text-align:center;
+    border:1px solid #e0e6ee;
+    border-radius:8px;
+    padding:25px;
+}
+
+.contact-card h3{
+    margin:10px 0;
+    color:#061f43;
+}
+
+.contact-card p{
+    color:#687587;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#04172f;
+    color:white;
+    padding:35px 0 0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+    padding-bottom:30px;
+}
+
+.footer-title{
+    color:#f8b51b;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-size:13px;
+}
+
+.social{
+    display:flex;
+    gap:10px;
+}
+
+.social a{
+    width:34px;
+    height:34px;
+    border:1px solid #66809e;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #233b58;
+    padding:15px;
+    font-size:12px;
+    color:#b9c5d3;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .nav{
+        gap:12px;
+    }
+
+    .nav a{
+        font-size:12px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .course-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+} 
+  @media(max-width:750px){
+
+    .nav-wrap{
+        min-height:75px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        right:0;
+        background:#061f43;
+        flex-direction:column;
+        align-items:stretch;
+        padding:15px 5%;
+    }
+
+    .nav.open{
+        display:flex;
+    }
+
+    .nav a{
+        padding:10px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image{
+        min-height:250px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .brand-title{
+        font-size:15px;
+    }
+
+    .brand-subtitle{
+        font-size:9px;
+    }
+
+    .brand-logo{
+        width:45px;
+        height:50px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
 </head>
+
 <body>
 
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#home">
-      <div class="brand-logo" aria-label="Rajasthan Finishing School logo">
-        <span>RF</span>
-      </div>
-      <div>
-        <div class="brand-title">RAJASTHAN<br><b>FINISHING SCHOOL</b></div>
-        <div class="brand-subtitle">Government Dungar College, Bikaner</div>
-      </div>
-    </a>
 
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+<div class="container nav-wrap">
 
-    <nav class="nav" id="mainNav">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#courses">Courses</a>
-      <a href="#programs">Programs</a>
-      <a href="#activities">Activities</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-register" href="#contact">REGISTER NOW</a>
-    </nav>
-  </div>
+<a href="#home" class="brand">
+
+<div class="brand-logo">
+<span>RF</span>
+</div>
+
+<div>
+<div class="brand-title">
+RAJASTHAN<br>
+FINISHING SCHOOL
+</div>
+
+<div class="brand-subtitle">
+Government Dungar College, Bikaner
+</div>
+</div>
+
+</a>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+
+<nav class="nav" id="mainNav">
+
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#courses">Courses</a>
+<a href="#programs">Programs</a>
+<a href="#activities">Activities</a>
+<a href="#contact">Contact</a>
+
+<a class="nav-register" href="#contact">
+REGISTER NOW
+</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<main id="home">
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">RAJASTHAN FINISHING SCHOOL</p>
-        <h1>BUILD YOUR SKILLS.<br><span>SAFE YOUR FUTURE.</span></h1>
-        <p class="hero-text">
-          Industry-oriented skill development programs with AI,
-          Technology &amp; Career-focused training.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-dark" href="#courses">EXPLORE COURSES</a>
-          <a class="btn btn-gold" href="#contact">REGISTER NOW</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/college.svg" alt="Government Dungar College, Bikaner">
-        <div class="photo-fade"></div>
-        <div class="photo-label">
-          <strong>Government Dungar College</strong>
-          <span>Bikaner, Rajasthan</span>
-        </div>
-      </div>
-    </div>
+<main>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="hero-copy">
+
+<p class="eyebrow">
+RAJASTHAN FINISHING SCHOOL
+</p>
+
+<h1>
+BUILD YOUR SKILLS.
+<br>
+<span>SECURE YOUR FUTURE.</span>
+</h1>
+
+<p class="hero-text">
+Industry-oriented skill development programs with Artificial Intelligence,
+Technology and practical career-focused training.
+</p>
+
+<div class="hero-actions">
+
+<a class="btn btn-dark" href="#courses">
+EXPLORE COURSES
+</a>
+
+<a class="btn btn-gold" href="#contact">
+REGISTER NOW
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<div class="hero-image-box">
+
+<h2>
+RAJASTHAN<br>
+FINISHING SCHOOL
+</h2>
+
+<p>
+Government Dungar College, Bikaner
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-          <section class="course-section" id="courses">
-    <div class="container course-grid">
 
-      <article class="course-card blue-card">
+
+<!-- COURSES -->
+
+<section class="course-section" id="courses">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-kicker">
+OUR COURSES
+</p>
+
+<h2>
+Skill Development Programs
+</h2>
+
+</div>
+
+
+<div class="course-grid">
+
+
+<!-- COURSE 1 -->
+
 <article class="course-card blue-card">
 
-    <div class="course-icon">💼</div>
+<div class="course-icon">
+📊
+</div>
 
-    <div>
+<h3>
+AI BUSINESS ANALYST
+</h3>
 
-        <h2>AI BUSINESS ANALYST</h2>
+<span class="badge">
+CURRENT BATCH RUNNING
+</span>
 
-        <span class="badge">
-            CURRENT BATCH RUNNING
-        </span>
+<p>
+Business Analysis, Artificial Intelligence, Excel, SQL,
+Power BI, dashboards, reporting and data-driven decision making.
+</p>
 
-        <p>
-            Learn business analysis, data analytics, AI tools
-            and data-driven decision making for modern industries.
-        </p>
+<a class="details-link"
+href="course.html?course=business-analyst">
 
-        <a href="program-details.html"
-           class="course-details-link">
-
-            View Details →
-
-        </a>
-
-    </div>
+VIEW DETAILS →
+</a>
 
 </article>
-    
 
-      <article class="course-card green-card">
-        <div class="course-icon">💻</div>
-        <div>
-          <h2>APPLICATION DEVELOPER<br>(WEB &amp; MOBILE)</h2>
-          <p>Learn to build modern web and mobile applications with practical technology training.</p>
-          <a href="#contact">View Details →</a>
-        </div>
-      </article>
 
-      <article class="course-card peach-card">
-        <div class="course-icon"><span class="marketing-icon">📈</span></div>
-        <div>
-          <h2>DIGITAL MARKETING<br>WITH AI</h2>
-          <p>Learn digital marketing strategies, AI tools, content creation and online business skills.</p>
-          <a href="#contact">View Details →</a>
-        </div>
-      </article>
+<!-- COURSE 2 -->
 
-    </div>
-  </section>
+<article class="course-card green-card">
 
-  <section class="trust-strip">
-    <div class="container trust-grid">
-      <div><span>💼</span><b>Industry Oriented</b><small>Training aligned with industry needs</small></div>
-      <div><span>⚙️</span><b>AI &amp; Technology</b><small>Learn modern AI tools and technologies</small></div>
-      <div><span>💻</span><b>Practical Learning</b><small>Hands-on projects and real-world exposure</small></div>
-      <div><span>🎯</span><b>Career Guidance</b><small>Placement support and career counseling</small></div>
-      <div><span>👨‍🏫</span><b>Expert Trainers</b><small>Learn from experienced professionals</small></div>
-      <div><span>📈</span><b>Skill Development</b><small>Enhance your skills and grow your career</small></div>
-    </div>
-  </section>
+<div class="course-icon">
+💻
+</div>
 
-  <section class="about-section" id="about">
-    <div class="container about-grid">
-      <div>
-        <p class="section-kicker">ABOUT US</p>
-        <h2>Skills for Today.<br><span>Opportunities for Tomorrow.</span></h2>
-      </div>
-      <div>
-        <p>Rajasthan Finishing School at Government Dungar College, Bikaner focuses on practical, industry-oriented and future-ready skill development.</p>
-        <p>Students can explore emerging areas such as Artificial Intelligence, Business Analysis, Application Development and Digital Marketing.</p>
-      </div>
-    </div>
-  </section>
+<h3>
+APPLICATION DEVELOPER
+<br>
+(WEB & MOBILE)
+</h3>
 
-  <section class="programs-section" id="programs">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-kicker">PROGRAMS &amp; UPDATES</p>
-        <h2>What's Happening Now?</h2>
-      </div>
+<p>
+Learn modern web and mobile application development,
+programming fundamentals and practical project development.
+</p>
 
-      <div class="program-grid">
-        <article class="program-box current-box">
-          <div class="box-label">CURRENT PROGRAM</div>
-          <h3><span class="live-dot"></span> AI BUSINESS ANALYST</h3>
-          <p>Training Program is Currently Running</p>
-          <p>📍 Government Dungar College, Bikaner</p>
-          <a class="small-btn light" href="#contact">ENQUIRE NOW</a>
-        </article>
+<a class="details-link"
+href="course.html?course=application-developer">
 
-        <article class="program-box">
-          <h3>UPCOMING PROGRAMS</h3>
-          <ul>
-            <li>Application Developer (Web &amp; Mobile)</li>
-            <li>Digital Marketing with AI</li>
-            <li>More Industry-focused Courses</li>
-          </ul>
-          <a class="small-btn" href="#courses">VIEW ALL PROGRAMS</a>
-        </article>
+VIEW DETAILS →
+</a>
 
-        <article class="program-box" id="activities">
-          <h3>ACTIVITIES &amp; WORKSHOPS</h3>
-          <div class="mini-gallery">
-            <img src="assets/activity-1.svg" alt="Training activity">
-            <img src="assets/activity-2.svg" alt="Workshop">
-            <img src="assets/activity-3.svg" alt="Student activity">
-          </div>
-          <a class="small-btn" href="#gallery">VIEW GALLERY</a>
-        </article>
+</article>
 
-        <article class="program-box">
-          <h3>NOTICES &amp; ANNOUNCEMENTS</h3>
-          <ul class="notice-list">
-            <li>AI Business Analyst – Batch Running <b>New</b></li>
-            <li>Registrations are Open <b>New</b></li>
-            <li>Upcoming Workshop Announced</li>
-            <li>Follow us for more updates</li>
-          </ul>
-          <a class="small-btn" href="#contact">VIEW ALL NOTICES</a>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section class="gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-kicker">OUR CAMPUS LIFE</p>
-        <h2>Activities &amp; Training Gallery</h2>
-      </div>
-      <div class="gallery-grid">
-        <img src="assets/activity-1.svg" alt="Training session">
-        <img src="assets/activity-2.svg" alt="Workshop">
-        <img src="assets/activity-3.svg" alt="Students">
-        <img src="assets/activity-4.svg" alt="Program activity">
-      </div>
-    </div>
-  </section>
+<!-- COURSE 3 -->
 
-  <section class="cta">
-    <div class="container cta-inner">
-      <div>
-        <div class="cta-title">EMPOWERING STUDENTS WITH SKILLS TODAY</div>
-        <div class="cta-gold">FOR A BETTER TOMORROW</div>
-        <p>Take the first step towards a successful career.</p>
-      </div>
-      <a class="btn btn-gold" href="#contact">REGISTER NOW</a>
-    </div>
-  </section>
+<article class="course-card peach-card">
 
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-kicker">GET IN TOUCH</p>
-        <h2>Contact &amp; Registration</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <span>📍</span>
-          <h3>ADDRESS</h3>
-          <p>Government Dungar College,<br>Bikaner, Rajasthan – 334001</p>
-        </div>
-        <div class="contact-card">
-          <span>📞</span>
-          <h3>CONTACT US</h3>
-          <p>0151-XXXXXXXX<br>rfs@dungarcollege.ac.in</p>
-        </div>
-        <div class="contact-card">
-          <span>📝</span>
-          <h3>REGISTRATION</h3>
-          <p>Click below to register or enquire about current courses.</p>
-          <a class="small-btn gold-btn" href="https://forms.google.com/" target="_blank" rel="noopener">OPEN REGISTRATION FORM</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="course-icon">
+📈
+</div>
+
+<h3>
+DIGITAL MARKETING
+<br>
+WITH AI
+</h3>
+
+<p>
+Digital marketing, AI-assisted content creation,
+social media marketing, analytics and online business skills.
+</p> 
+  <a class="details-link"
+href="course.html?course=digital-marketing">
+
+VIEW DETAILS →
+</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-box">
+<strong>Industry Oriented</strong>
+<span>Training aligned with modern industry requirements.</span>
+</div>
+
+<div class="trust-box">
+<strong>AI & Technology</strong>
+<span>Learn modern Artificial Intelligence tools.</span>
+</div>
+
+<div class="trust-box">
+<strong>Practical Learning</strong>
+<span>Hands-on projects and real-world exposure.</span>
+</div>
+
+<div class="trust-box">
+<strong>Career Guidance</strong>
+<span>Career-oriented learning and professional guidance.</span>
+</div>
+
+<div class="trust-box">
+<strong>Expert Trainers</strong>
+<span>Learn from experienced professionals.</span>
+</div>
+
+<div class="trust-box">
+<strong>Skill Development</strong>
+<span>Develop practical skills for future careers.</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div>
+
+<p class="section-kicker">
+ABOUT US
+</p>
+
+<h2>
+Skills for Today.
+<br>
+<span>Opportunities for Tomorrow.</span>
+</h2>
+
+</div>
+
+
+<div class="about-text">
+
+<p>
+Rajasthan Finishing School at Government Dungar College,
+Bikaner focuses on practical, industry-oriented and
+future-ready skill development.
+</p>
+
+<p>
+Students can explore emerging areas such as Artificial
+Intelligence, Business Analysis, Application Development
+and Digital Marketing.
+</p>
+
+<p>
+The objective is to connect classroom learning with
+practical skills, projects and modern workplace requirements.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-kicker">
+PROGRAMS & UPDATES
+</p>
+
+<h2>
+What's Happening Now?
+</h2>
+
+</div>
+
+
+<div class="program-grid">
+
+
+<div class="program-box current">
+
+<h3>
+● AI BUSINESS ANALYST
+</h3>
+
+<p>
+Training Program is Currently Running.
+</p>
+
+<p>
+Government Dungar College, Bikaner
+</p>
+
+<a class="btn btn-gold"
+href="course.html?course=business-analyst">
+VIEW PROGRAM
+</a>
+
+</div>
+
+
+<div class="program-box">
+
+<h3>
+UPCOMING PROGRAMS
+</h3>
+
+<ul>
+
+<li>
+Application Developer (Web & Mobile)
+</li>
+
+<li>
+Digital Marketing with AI
+</li>
+
+<li>
+More Industry-focused Courses
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="program-box" id="activities">
+
+<h3>
+ACTIVITIES & WORKSHOPS
+</h3>
+
+<p>
+Practical training, workshops, project activities
+and industry-oriented learning opportunities.
+</p>
+
+</div>
+
+
+<div class="program-box">
+
+<h3>
+NOTICES & ANNOUNCEMENTS
+</h3>
+
+<ul>
+
+<li>
+AI Business Analyst – Batch Running
+</li>
+
+<li>
+Registrations are Open
+</li>
+
+<li>
+Upcoming Workshop Announced
+</li>
+
+<li>
+More updates will be published here
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-kicker">
+OUR CAMPUS LIFE
+</p>
+
+<h2>
+Activities & Training
+</h2>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+Training Sessions
+</div>
+
+<div class="gallery-item">
+Practical Learning
+</div>
+
+<div class="gallery-item">
+Student Activities
+</div>
+
+<div class="gallery-item">
+Workshops
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container cta-inner">
+
+<div>
+
+<h2>
+EMPOWERING STUDENTS WITH SKILLS TODAY
+<br>
+<span>FOR A BETTER TOMORROW</span>
+</h2>
+
+<p>
+Take the first step towards a successful career.
+</p>
+
+</div>
+
+<a class="btn btn-gold" href="#contact">
+REGISTER NOW
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-kicker">
+GET IN TOUCH
+</p>
+
+<h2>
+Contact & Registration
+</h2>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div style="font-size:32px;">
+📍
+</div>
+
+<h3>
+ADDRESS
+</h3>
+
+<p>
+Government Dungar College,
+<br>
+Bikaner, Rajasthan – 334001
+</p>
+
+</div>
+
+
+<div class="contact-card"> 
+  <div style="font-size:32px;">
+📞
+</div>
+
+<h3>
+CONTACT US
+</h3>
+
+<p>
+Government Dungar College
+<br>
+Bikaner, Rajasthan
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div style="font-size:32px;">
+📝
+</div>
+
+<h3>
+REGISTRATION
+</h3>
+
+<p>
+Click below to register or enquire
+about the current courses.
+</p>
+
+<br>
+
+<!-- अपना Google Form Link यहाँ डालें -->
+
+<a class="btn btn-gold"
+href="YOUR-GOOGLE-FORM-LINK"
+target="_blank">
+
+OPEN REGISTRATION FORM
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <div class="brand-logo small"><span>RF</span></div>
-      <div><b>Rajasthan Finishing School</b><small>Government Dungar College, Bikaner</small></div>
-    </div>
-    <div>
-      <b>QUICK LINKS</b>
-      <div class="footer-links">
-        <a href="#home">Home</a><a href="#about">About Us</a><a href="#courses">Courses</a>
-        <a href="#programs">Programs</a><a href="#contact">Contact</a>
-      </div>
-    </div>
-    <div>
-      <b>FOLLOW US</b>
-      <div class="socials">
-        <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="LinkedIn">in</a>
-      </div>
-    </div>
-  </div>
-  <div class="copyright">© 2026 Rajasthan Finishing School | Government Dungar College, Bikaner</div>
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-title">
+RAJASTHAN FINISHING SCHOOL
+</div>
+
+<p style="font-size:13px;color:#c6d0dc;">
+Government Dungar College, Bikaner
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+QUICK LINKS
+</div>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#courses">Courses</a>
+<a href="#programs">Programs</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+FOLLOW US
+</div>
+
+<div class="social">
+
+<a href="#" aria-label="Facebook">
+f
+</a>
+
+<a href="#" aria-label="Instagram">
+◎
+</a>
+
+<a href="#" aria-label="YouTube">
+▶
+</a>
+
+<a href="#" aria-label="LinkedIn">
+in
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Rajasthan Finishing School |
+Government Dungar College, Bikaner
+
+</div>
+
 </footer>
 
-<script src="script.js"></script>
+
+<script>
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const mainNav =
+document.getElementById("mainNav");
+
+menuToggle.addEventListener("click",function(){
+
+mainNav.classList.toggle("open");
+
+});
+
+
+document.querySelectorAll(".nav a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+mainNav.classList.remove("open");
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
