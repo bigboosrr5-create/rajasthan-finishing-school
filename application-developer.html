@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Application Developer (Web & Mobile) | Rajasthan Finishing School</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#eef4ff,#f8fbff);
+    color:#17233c;
+    min-height:100vh;
+}
+
+/* TOP HEADER */
+
+.header{
+    background:linear-gradient(135deg,#071b49,#123c82);
+    color:white;
+    text-align:center;
+    padding:35px 20px 45px;
+}
+
+.header small{
+    font-size:15px;
+    letter-spacing:1px;
+    opacity:.9;
+}
+
+.header h1{
+    font-size:42px;
+    margin:12px 0;
+    font-weight:800;
+}
+
+.header h2{
+    font-size:20px;
+    font-weight:400;
+    opacity:.95;
+}
+
+.badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.badge{
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.3);
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+/* MAIN */
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:-25px auto 50px;
+}
+
+/* COURSE INTRO */
+
+.intro{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.intro h3{
+    font-size:27px;
+    color:#123c82;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#5b6678;
+    line-height:1.7;
+    max-width:850px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:28px;
+    min-height:220px;
+    box-shadow:0 8px 25px rgba(0,0,0,.09);
+    border:1px solid #e5eaf2;
+    cursor:pointer;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#eaf1ff;
+    right:-25px;
+    top:-25px;
+}
+
+.icon{
+    width:62px;
+    height:62px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    margin-bottom:18px;
+    background:#eaf1ff;
+}
+
+.card h3{
+    font-size:22px;
+    color:#123c82;
+    margin-bottom:9px;
+}
+
+.card p{
+    color:#687386;
+    line-height:1.5;
+}
+
+.click{
+    display:inline-block;
+    margin-top:15px;
+    color:#1769d1;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* DETAIL SECTION */
+
+.details{
+    margin-top:30px;
+}
+
+.detail-box{
+    display:none;
+    background:white;
+    border-radius:20px;
+    padding:32px;
+    margin-bottom:25px;
+    box-shadow:0 10px 35px rgba(0,0,0,.10);
+    animation:fadeIn .35s ease;
+}
+
+.detail-box.active{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.detail-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.detail-title .big-icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    background:#eaf1ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+}
+
+.detail-title h2{
+    color:#123c82;
+    font-size:27px;
+}
+
+.section{
+    margin-top:25px;
+}
+
+.section h4{
+    color:#173f7c;
+    font-size:19px;
+    margin-bottom:13px;
+    border-left:5px solid #1769d1;
+    padding-left:10px;
+}
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    padding:11px 10px;
+    border-bottom:1px solid #edf0f5;
+    line-height:1.5;
+}
+
+.list li::before{
+    content:"✓";
+    color:#138a4b;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* COURSE STRUCTURE */
+
+.module-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.module{
+    background:#f7faff;
+    border:1px solid #dfe8f7;
+    padding:18px;
+    border-radius:13px;
+} 
+  .module strong{
+    display:block;
+    color:#123c82;
+    margin-bottom:7px;
+}
+
+.module span{
+    color:#647084;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#eef5ff;
+    border:1px solid #d5e4fa;
+    color:#17447e;
+    padding:10px 15px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* FEES */
+
+.fee-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.fee-table th{
+    background:#123c82;
+    color:white;
+    padding:14px;
+    text-align:center;
+}
+
+.fee-table td{
+    padding:14px;
+    border:1px solid #e2e7ef;
+    text-align:center;
+}
+
+.fee-table tr:nth-child(even){
+    background:#f7faff;
+}
+
+.note{
+    margin-top:15px;
+    padding:15px;
+    background:#fff8e6;
+    border-left:5px solid #f0ae00;
+    border-radius:8px;
+    color:#65521e;
+    line-height:1.6;
+}
+
+/* ELIGIBILITY */
+
+.eligibility{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.eligibility-item{
+    background:#f8fbff;
+    border:1px solid #e1e8f3;
+    padding:18px;
+    border-radius:13px;
+}
+
+.eligibility-item strong{
+    display:block;
+    color:#123c82;
+    margin-bottom:7px;
+}
+
+/* CTA */
+
+.cta{
+    margin-top:25px;
+    background:linear-gradient(135deg,#123c82,#1769d1);
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+}
+
+.cta h2{
+    margin-bottom:10px;
+}
+
+.cta p{
+    opacity:.9;
+    line-height:1.6;
+}
+
+.contact{
+    margin-top:18px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* BACK BUTTON */
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    border-radius:25px;
+    background:#edf3fc;
+    color:#123c82;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .header h1{
+        font-size:30px;
+    }
+
+    .header h2{
+        font-size:16px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .module-grid{
+        grid-template-columns:1fr;
+    }
+
+    .eligibility{
+        grid-template-columns:1fr;
+    }
+
+    .detail-box{
+        padding:22px;
+    }
+
+    .fee-table{
+        font-size:13px;
+    }
+
+    .fee-table th,
+    .fee-table td{
+        padding:9px 5px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <small>RAJASTHAN FINISHING SCHOOL (RFS) INITIATIVE</small>
+
+    <h1>Application Developer</h1>
+
+    <h2>Web & Mobile Application Development</h2>
+
+    <div class="badges">
+        <div class="badge">💻 IT & ITES</div>
+        <div class="badge">⏱️ 540 Hours</div>
+        <div class="badge">👥 60 Seats</div>
+        <div class="badge">🚀 Industry-Oriented Training</div>
+    </div>
+
+</header>
+
+
+<main class="container">
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h3>Application Developer – Web & Mobile</h3>
+
+    <p>
+        Build practical skills in modern web and mobile application development.
+        This industry-oriented course focuses on programming, web technologies,
+        databases, application development, deployment and real-world project work.
+    </p>
+
+</section>
+
+
+<!-- FOUR MAIN CARDS -->
+
+<section class="cards">
+
+    <!-- COURSE STRUCTURE -->
+
+    <div class="card" onclick="openDetail('structure')">
+
+        <div class="icon">📚</div>
+
+        <h3>Course Structure</h3>
+
+        <p>
+            Explore the complete learning modules, technologies,
+            practical training and project-based learning.
+        </p>
+
+        <span class="click">View Course Structure →</span>
+
+    </div>
+
+
+    <!-- SKILLS -->
+
+    <div class="card" onclick="openDetail('skills')">
+
+        <div class="icon">💻</div>
+
+        <h3>Skills & Career Outcomes</h3>
+
+        <p>
+            Learn the technical and professional skills required
+            for modern web and mobile development careers.
+        </p>
+
+        <span class="click">View Skills & Outcomes →</span>
+
+    </div>
+
+
+    <!-- FEES -->
+
+    <div class="card" onclick="openDetail('fees')">
+
+        <div class="icon">💰</div>  
+      <h3>Fee Structure</h3>
+
+        <p>
+            View the course fee structure for Government,
+            State-Funded and Private institutions.
+        </p>
+
+        <span class="click">View Fee Structure →</span>
+
+    </div>
+
+
+    <!-- ELIGIBILITY -->
+
+    <div class="card" onclick="openDetail('eligibility')">
+
+        <div class="icon">🎓</div>
+
+        <h3>Eligibility</h3>
+
+        <p>
+            Check the academic eligibility, student categories
+            and required documents for admission.
+        </p>
+
+        <span class="click">View Eligibility →</span>
+
+    </div>
+
+</section>
+
+
+<!-- DETAILS -->
+
+<section class="details">
+
+
+<!-- COURSE STRUCTURE -->
+
+<div id="structure" class="detail-box">
+
+    <div class="detail-title">
+
+        <div class="big-icon">📚</div>
+
+        <h2>Course Structure</h2>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Core Learning Modules</h4>
+
+        <div class="module-grid">
+
+            <div class="module">
+                <strong>🌐 Web Development Fundamentals</strong>
+                <span>
+                    HTML, CSS, responsive layouts, web page structure
+                    and modern web development concepts.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>⚙️ Programming Fundamentals</strong>
+                <span>
+                    Programming logic, variables, functions, conditions,
+                    loops, arrays and object-oriented concepts.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>🖥️ Front-End Development</strong>
+                <span>
+                    User interface development, responsive design,
+                    JavaScript and interactive web applications.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>🔧 Back-End Development</strong>
+                <span>
+                    Server-side concepts, APIs, application logic
+                    and database connectivity.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>🗄️ Database & SQL</strong>
+                <span>
+                    Database concepts, SQL queries, data management
+                    and application database integration.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>📱 Mobile Application Development</strong>
+                <span>
+                    Mobile application concepts, UI design,
+                    application development and testing.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>🔗 API & Application Integration</strong>
+                <span>
+                    REST APIs, data exchange, third-party services
+                    and application integration.
+                </span>
+            </div>
+
+            <div class="module">
+                <strong>🚀 Project Development</strong>
+                <span>
+                    Practical project work, deployment, documentation
+                    and presentation of a complete application.
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Practical Training</h4>
+
+        <ul class="list">
+
+            <li>Hands-on coding exercises</li>
+            <li>Web application development</li>
+            <li>Mobile application development</li>
+            <li>Database-based projects</li>
+            <li>Real-world project assignments</li>
+            <li>Project documentation and presentation</li>
+            <li>Industry-oriented practical training</li>
+
+        </ul>
+
+    </div>
+
+    <div class="back" onclick="closeDetails()">← Back to Course Details</div>
+
+</div>
+
+
+
+<!-- SKILLS -->
+
+<div id="skills" class="detail-box">
+
+    <div class="detail-title">
+
+        <div class="big-icon">💻</div>
+
+        <h2>Skills & Career Outcomes</h2>
+
+    </div>
+
+
+    <div class="section">
+
+          <h4>Technical Skills</h4>  
+      <div class="skills">
+
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Responsive Web Design</div>
+            <div class="skill">Front-End Development</div>
+            <div class="skill">Back-End Development</div>
+            <div class="skill">SQL & Databases</div>
+            <div class="skill">API Development</div>
+            <div class="skill">Web Applications</div>
+            <div class="skill">Mobile Applications</div>
+            <div class="skill">Git & Version Control</div>
+            <div class="skill">Testing & Debugging</div>
+            <div class="skill">Application Deployment</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Career-Oriented Outcomes</h4>
+
+        <ul class="list">
+
+            <li>Junior Web Developer</li>
+            <li>Front-End Developer</li>
+            <li>Back-End Developer</li>
+            <li>Full Stack Developer</li>
+            <li>Mobile Application Developer</li>
+            <li>Web Application Developer</li>
+            <li>Software Development Trainee</li>
+            <li>Application Support & Development Roles</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Additional Benefits</h4>
+
+        <ul class="list">
+
+            <li>Industry-oriented practical training</li>
+            <li>Live project exposure</li>
+            <li>Practical experience</li>
+            <li>Placement assistance as applicable</li>
+            <li>Career guidance and industry exposure</li>
+
+        </ul>
+
+    </div>
+
+    <div class="back" onclick="closeDetails()">← Back to Course Details</div>
+
+</div>
+
+
+
+<!-- FEES -->
+
+<div id="fees" class="detail-box">
+
+    <div class="detail-title">
+
+        <div class="big-icon">💰</div>
+
+        <h2>Fee Structure</h2>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Application Developer – Web & Mobile</h4>
+
+        <table class="fee-table">
+
+            <tr>
+                <th>Institution Type</th>
+                <th>Student Category</th>
+                <th>Course Fee</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">
+                    Government / State-Funded University
+                </td>
+
+                <td>
+                    General Category (Male)
+                </td>
+
+                <td>
+                    ₹4,356
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    SC / ST / OBC / MBC / EWS / Female
+                </td>
+
+                <td>
+                    ₹2,268
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td rowspan="2">
+                    Private Institution
+                </td>
+
+                <td>
+                    General Category (Male)
+                </td>
+
+                <td>
+                    ₹11,340
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    SC / ST / OBC / MBC / EWS / Female
+                </td>
+
+                <td>
+                    ₹5,670
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        <div class="note">
+
+            <strong>Note:</strong>
+            The above fee structure is based on the course information
+            provided for the Rajasthan Finishing School initiative.
+            Students should confirm the applicable fee at the time of admission.
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Course Information</h4>
+
+        <ul class="list">
+
+            <li>Course Duration: 540 Hours</li>
+            <li>Course Sector: IT & ITES</li>
+            <li>Course: Application Developer (Web & Mobile)</li>
+            <li>Seats: 60 per course</li>
+            <li>Training includes practical and project-based learning</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="back" onclick="closeDetails()">← Back to Course Details</div>
+
+</div>
+
+
+
+<!-- ELIGIBILITY -->
+
+<div id="eligibility" class="detail-box">
+
+    <div class="detail-title">  
+      <div class="big-icon">🎓</div>
+
+        <h2>Eligibility</h2>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Who Can Apply?</h4>
+
+        <div class="eligibility">
+
+            <div class="eligibility-item">
+
+                <strong>🎓 Undergraduate Students</strong>
+
+                Students who have completed or are pursuing
+                undergraduate-level studies as applicable.
+
+            </div>
+
+
+            <div class="eligibility-item">
+
+                <strong>📖 Postgraduate Students</strong>
+
+                Students pursuing or having completed postgraduate
+                studies may apply as per applicable guidelines.
+
+            </div>
+
+
+            <div class="eligibility-item">
+
+                <strong>🏫 Final Year / Semester Students</strong>
+
+                Students studying in the final year or
+                applicable final semester can apply.
+
+            </div>
+
+
+            <div class="eligibility-item">
+
+                <strong>📘 Semester-IV & Above</strong>
+
+                Eligible students studying in applicable
+                higher semesters may apply.
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Eligible Institutions</h4>
+
+        <ul class="list">
+
+            <li>Government Colleges</li>
+            <li>Government Universities</li>
+            <li>State-Funded Universities</li>
+            <li>Eligible Private Colleges / Institutions</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Required Documents</h4>
+
+        <ul class="list">
+
+            <li>Recent educational marksheet / certificate</li>
+            <li>Valid Aadhaar Card or identity document</li>
+            <li>College / University ID</li>
+            <li>SC / ST / OBC / MBC / EWS certificate, if applicable</li>
+            <li>Recent passport-size photograph</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="section">
+
+        <h4>Age Requirement</h4>
+
+        <p style="line-height:1.7;color:#5e6878;">
+            Applicants should satisfy the applicable age criteria
+            prescribed under the Rajasthan Finishing School programme.
+            Please confirm the current admission guidelines before applying.
+        </p>
+
+    </div>
+
+
+    <div class="back" onclick="closeDetails()">← Back to Course Details</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="cta">
+
+    <h2>Ready to Build Your Career in Application Development?</h2>
+
+    <p>
+        Gain practical skills in Web & Mobile Application Development
+        and prepare yourself for modern technology careers.
+    </p>
+
+    <div class="contact">
+        📞 For Course Information: 9636688132
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+function openDetail(id){
+
+    const boxes = document.querySelectorAll('.detail-box');
+
+    boxes.forEach(function(box){
+        box.classList.remove('active');
+    });
+
+    const selected = document.getElementById(id);
+
+    if(selected){
+        selected.classList.add('active');
+
+        setTimeout(function(){
+
+            selected.scrollIntoView({
+                behavior:'smooth',
+                block:'start'
+            });
+
+        },100);
+    }
+}
+
+
+function closeDetails(){
+
+    const boxes = document.querySelectorAll('.detail-box');
+
+    boxes.forEach(function(box){
+        box.classList.remove('active');
+    });
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+
+}
+
+</script>
+
+</body>
+</html>  
